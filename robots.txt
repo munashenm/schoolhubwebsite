@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://schoolhubsa.co.za
+Sitemap: https://schoolhubsa.co.za/sitemap.xml
