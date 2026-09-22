@@ -1,39 +1,51 @@
 1:"$Sreact.fragment"
-2:I[22016,["/_next/static/chunks/3fntmmi971322.js","/_next/static/chunks/2lkhgpfgdoj_5.js","/_next/static/chunks/21s4lf5b4fa-9.js"],""]
-3:I[44941,["/_next/static/chunks/3fntmmi971322.js","/_next/static/chunks/2lkhgpfgdoj_5.js","/_next/static/chunks/21s4lf5b4fa-9.js"],"DemoForm"]
-4:I[97367,["/_next/static/chunks/3fntmmi971322.js","/_next/static/chunks/2lkhgpfgdoj_5.js"],"OutletBoundary"]
+2:I[22016,["/_next/static/chunks/3fntmmi971322.js","/_next/static/chunks/1suynbnl-hbj3.js","/_next/static/chunks/21s4lf5b4fa-9.js"],""]
+3:I[44941,["/_next/static/chunks/3fntmmi971322.js","/_next/static/chunks/1suynbnl-hbj3.js","/_next/static/chunks/21s4lf5b4fa-9.js"],"DemoForm"]
+4:I[97367,["/_next/static/chunks/3fntmmi971322.js","/_next/static/chunks/1suynbnl-hbj3.js"],"OutletBoundary"]
 5:"$Sreact.suspense"
-9:I[97367,["/_next/static/chunks/3fntmmi971322.js","/_next/static/chunks/2lkhgpfgdoj_5.js"],"ViewportBoundary"]
-a:I[97367,["/_next/static/chunks/3fntmmi971322.js","/_next/static/chunks/2lkhgpfgdoj_5.js"],"MetadataBoundary"]
+9:I[97367,["/_next/static/chunks/3fntmmi971322.js","/_next/static/chunks/1suynbnl-hbj3.js"],"ViewportBoundary"]
+a:I[97367,["/_next/static/chunks/3fntmmi971322.js","/_next/static/chunks/1suynbnl-hbj3.js"],"MetadataBoundary"]
 8:X
-1e:X
-1e:C
-0:{"buildId":"mFt5KvldcqGyGOW96aiQB","data":[{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://schoolhubsa.co.za/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Request a Demo\",\"item\":\"https://schoolhubsa.co.za/demo/\"}]}"}}],["$","div",null,{"className":"border-b border-border bg-surface","children":["$","div",null,{"className":"mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8 py-14 sm:py-16 lg:py-20","children":[["$","nav",null,{"aria-label":"Breadcrumb","className":"mb-6","children":["$","ol",null,{"className":"flex flex-wrap items-center gap-2 text-sm text-muted","children":[["$","li","Home",{"className":"flex items-center gap-2","children":[null,["$","$L2",null,{"href":"/","className":"hover:text-ink","children":"Home"}]]}],["$","li","Request a Demo",{"className":"flex items-center gap-2","children":[["$","span",null,{"aria-hidden":true,"children":"/"}],["$","span",null,{"className":"text-ink","children":"Request a Demo"}]]}]]}]}],["$","p",null,{"className":"mb-3 text-sm font-medium text-brand","children":"Demo"}],["$","h1",null,{"className":"font-display max-w-3xl text-3xl font-semibold tracking-tight text-ink sm:text-4xl lg:text-5xl","children":"Request your SchoolHub demo"}],["$","p",null,{"className":"mt-4 max-w-2xl text-base leading-relaxed text-muted sm:text-lg","children":"Tell us about your institution. We will walk through the platform with your use cases in mind — schools, colleges or training organisations, locally or internationally."}]]}]}],["$","section",null,{"className":"py-16 sm:py-20 lg:py-24 bg-background","children":["$","div",null,{"className":"mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8 grid gap-10 lg:grid-cols-12","children":[["$","div",null,{"className":"lg:col-span-5","children":[["$","h2",null,{"className":"font-display text-2xl font-semibold text-ink","children":"What to expect"}],["$","ul",null,{"className":"mt-6 space-y-3 text-sm leading-relaxed text-muted","children":[["$","li",null,{"children":"· A focused walkthrough of SchoolHub modules relevant to you"}],["$","li",null,{"children":"· Discussion of permissions, portals and academic structure"}],["$","li",null,{"children":["· Clear next steps with the ","Cyber Developers"," team"]}]]}],["$","p",null,{"className":"mt-8 text-sm text-muted","children":["Prefer email?"," ",["$","a",null,{"href":"mailto:sales@cyberdevelopers.co.za","className":"font-medium text-brand hover:underline","children":"sales@cyberdevelopers.co.za"}]]}],["$","p",null,{"className":"mt-2 text-sm text-muted","children":["Or call"," ",["$","a",null,{"href":"tel:+27875501813","className":"font-medium text-brand hover:underline","children":"087 550 1813"}]]}]]}],["$","div",null,{"className":"lg:col-span-7","children":["$","$L3",null,{}]}]]}]}]],[["$","script","script-0",{"src":"/_next/static/chunks/21s4lf5b4fa-9.js","async":true}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"isPartial":"$@7","staleTime":"$8","varyParams":null},{"rsc":["$","$1","h",{"children":[null,["$","$L9",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$La",null,{"children":["$","$5",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Request a Demo | SchoolHub SA"}],["$","meta","1",{"name":"description","content":"Request a SchoolHub demo for your school, college or training institution."}],["$","link","2",{"rel":"author","href":"https://www.cyberdevelopers.co.za"}],["$","meta","3",{"name":"author","content":"Cyber Developers"}],["$","meta","4",{"name":"keywords","content":"school management system,school management system South Africa,school administration software,learner management system,student management system,school fees management system,school payroll software,school attendance software,school timetable software,school communication system,student portal software,parent portal software,college management system,multi campus management system,school finance management software,SA-SAMS integration software,African school management system"}],"$Lb","$Lc","$Ld","$Le","$Lf","$L10","$L11","$L12","$L13","$L14","$L15","$L16","$L17","$L18","$L19"]}]}]}],"$L1a"]}],"isPartial":"$@1b","staleTime":"$8","varyParams":null},{"rsc":"$L1c","isPartial":"$@1d","staleTime":"$8","varyParams":"$1e"}],"isUpgradeableISRFallback":false,"a":"$@1f","rootVaryParams":null,"needsRuntimeRequest":"$@20"}
-21:I[27201,["/_next/static/chunks/3fntmmi971322.js","/_next/static/chunks/2lkhgpfgdoj_5.js"],"IconMark"]
-22:I[39756,["/_next/static/chunks/3fntmmi971322.js","/_next/static/chunks/2lkhgpfgdoj_5.js"],"default"]
-23:I[37457,["/_next/static/chunks/3fntmmi971322.js","/_next/static/chunks/2lkhgpfgdoj_5.js"],"default"]
+2a:X
+2a:C
+0:{"buildId":"oxSGcKzyKvvzXkfMf8jG3","data":[{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://schoolhubsa.co.za/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Request a Demo\",\"item\":\"https://schoolhubsa.co.za/demo/\"}]}"}}],["$","div",null,{"className":"border-b border-border bg-surface","children":["$","div",null,{"className":"mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8 py-14 sm:py-16 lg:py-20","children":[["$","nav",null,{"aria-label":"Breadcrumb","className":"mb-6","children":["$","ol",null,{"className":"flex flex-wrap items-center gap-2 text-sm text-muted","children":[["$","li","Home",{"className":"flex items-center gap-2","children":[null,["$","$L2",null,{"href":"/","className":"hover:text-ink","children":"Home"}]]}],["$","li","Request a Demo",{"className":"flex items-center gap-2","children":[["$","span",null,{"aria-hidden":true,"children":"/"}],["$","span",null,{"className":"text-ink","children":"Request a Demo"}]]}]]}]}],["$","p",null,{"className":"mb-3 text-sm font-medium text-brand","children":"Demo"}],["$","h1",null,{"className":"font-display max-w-3xl text-3xl font-semibold tracking-tight text-ink sm:text-4xl lg:text-5xl","children":"Request your SchoolHub demo"}],["$","p",null,{"className":"mt-4 max-w-2xl text-base leading-relaxed text-muted sm:text-lg","children":"Tell us about your institution. We will walk through the platform with your use cases in mind — schools, colleges or training organisations, locally or internationally."}]]}]}],["$","section",null,{"className":"py-16 sm:py-20 lg:py-24 bg-background","children":["$","div",null,{"className":"mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8 grid gap-10 lg:grid-cols-12","children":[["$","div",null,{"className":"lg:col-span-5","children":[["$","h2",null,{"className":"font-display text-2xl font-semibold text-ink","children":"What to expect"}],["$","ul",null,{"className":"mt-6 space-y-3 text-sm leading-relaxed text-muted","children":[["$","li",null,{"children":"· A focused walkthrough of SchoolHub modules relevant to you"}],["$","li",null,{"children":"· Discussion of permissions, portals and academic structure"}],["$","li",null,{"children":["· Clear next steps with the ","Cyber Developers"," team"]}]]}],["$","p",null,{"className":"mt-8 text-sm text-muted","children":["Prefer email?"," ",["$","a",null,{"href":"mailto:sales@cyberdevelopers.co.za","className":"font-medium text-brand hover:underline","children":"sales@cyberdevelopers.co.za"}]]}],["$","p",null,{"className":"mt-2 text-sm text-muted","children":["Or call"," ",["$","a",null,{"href":"tel:+27875501813","className":"font-medium text-brand hover:underline","children":"087 550 1813"}]]}]]}],["$","div",null,{"className":"lg:col-span-7","children":["$","$L3",null,{}]}]]}]}]],[["$","script","script-0",{"src":"/_next/static/chunks/21s4lf5b4fa-9.js","async":true}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"isPartial":"$@7","staleTime":"$8","varyParams":null},{"rsc":["$","$1","h",{"children":[null,["$","$L9",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$La",null,{"children":["$","$5",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Request a Demo | SchoolHub SA"}],["$","meta","1",{"name":"description","content":"Request a SchoolHub demo for your school, college or training institution."}],["$","link","2",{"rel":"author","href":"https://www.cyberdevelopers.co.za"}],["$","meta","3",{"name":"author","content":"Cyber Developers"}],["$","link","4",{"rel":"manifest","href":"/site.webmanifest"}],["$","meta","5",{"name":"keywords","content":"school management system,school management system South Africa,school administration software,learner management system,student management system,school fees management system,school payroll software,school attendance software,school timetable software,school communication system,student portal software,parent portal software,college management system,multi campus management system,school finance management software,SA-SAMS integration software,African school management system"}],"$Lb","$Lc","$Ld","$Le","$Lf","$L10","$L11","$L12","$L13","$L14","$L15","$L16","$L17","$L18","$L19","$L1a","$L1b","$L1c","$L1d","$L1e","$L1f","$L20","$L21","$L22","$L23","$L24","$L25"]}]}]}],"$L26"]}],"isPartial":"$@27","staleTime":"$8","varyParams":null},{"rsc":"$L28","isPartial":"$@29","staleTime":"$8","varyParams":"$2a"}],"isUpgradeableISRFallback":false,"a":"$@2b","rootVaryParams":null,"needsRuntimeRequest":"$@2c"}
+2d:I[27201,["/_next/static/chunks/3fntmmi971322.js","/_next/static/chunks/1suynbnl-hbj3.js"],"IconMark"]
+2e:I[39756,["/_next/static/chunks/3fntmmi971322.js","/_next/static/chunks/1suynbnl-hbj3.js"],"default"]
+2f:I[37457,["/_next/static/chunks/3fntmmi971322.js","/_next/static/chunks/1suynbnl-hbj3.js"],"default"]
 6:null
-b:["$","meta","5",{"name":"creator","content":"Cyber Developers"}]
-c:["$","meta","6",{"name":"robots","content":"index, follow"}]
-d:["$","link","7",{"rel":"canonical","href":"https://schoolhubsa.co.za/demo/"}]
-e:["$","meta","8",{"property":"og:title","content":"Request a Demo | SchoolHub SA"}]
-f:["$","meta","9",{"property":"og:description","content":"Request a SchoolHub demo for your school, college or training institution."}]
-10:["$","meta","10",{"property":"og:url","content":"https://schoolhubsa.co.za/demo/"}]
-11:["$","meta","11",{"property":"og:site_name","content":"SchoolHub SA"}]
-12:["$","meta","12",{"property":"og:locale","content":"en_ZA"}]
-13:["$","meta","13",{"property":"og:type","content":"website"}]
-14:["$","meta","14",{"name":"twitter:card","content":"summary_large_image"}]
-15:["$","meta","15",{"name":"twitter:title","content":"Request a Demo | SchoolHub SA"}]
-16:["$","meta","16",{"name":"twitter:description","content":"Request a SchoolHub demo for your school, college or training institution."}]
-17:["$","link","17",{"rel":"icon","href":"/favicon.ico?favicon.2vob68tjqpejf.ico","sizes":"256x256","type":"image/x-icon"}]
-18:["$","link","18",{"rel":"icon","href":"/favicon.ico"}]
-19:["$","$L21","19",{}]
-1a:["$","meta",null,{"name":"next-size-adjust","content":""}]
-1c:["$","$1","c",{"children":[null,["$","$L22",null,{"parallelRouterKey":"children","template":["$","$L23",null,{}]}]]}]
-20:true
+b:["$","meta","6",{"name":"creator","content":"Cyber Developers"}]
+c:["$","meta","7",{"name":"robots","content":"index, follow"}]
+d:["$","meta","8",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}]
+e:["$","link","9",{"rel":"canonical","href":"https://schoolhubsa.co.za/demo/"}]
+f:["$","meta","10",{"property":"og:title","content":"Request a Demo | SchoolHub SA"}]
+10:["$","meta","11",{"property":"og:description","content":"Request a SchoolHub demo for your school, college or training institution."}]
+11:["$","meta","12",{"property":"og:url","content":"https://schoolhubsa.co.za/demo/"}]
+12:["$","meta","13",{"property":"og:site_name","content":"SchoolHub SA"}]
+13:["$","meta","14",{"property":"og:locale","content":"en_ZA"}]
+14:["$","meta","15",{"property":"og:image","content":"https://schoolhubsa.co.za/images/branding/og-default.png/"}]
+15:["$","meta","16",{"property":"og:image:width","content":"1200"}]
+16:["$","meta","17",{"property":"og:image:height","content":"630"}]
+17:["$","meta","18",{"property":"og:image:alt","content":"SchoolHub SA"}]
+18:["$","meta","19",{"property":"og:type","content":"website"}]
+19:["$","meta","20",{"name":"twitter:card","content":"summary_large_image"}]
+1a:["$","meta","21",{"name":"twitter:title","content":"Request a Demo | SchoolHub SA"}]
+1b:["$","meta","22",{"name":"twitter:description","content":"Request a SchoolHub demo for your school, college or training institution."}]
+1c:["$","meta","23",{"name":"twitter:image","content":"https://schoolhubsa.co.za/images/branding/og-default.png/"}]
+1d:["$","link","24",{"rel":"shortcut icon","href":"/favicon.ico"}]
+1e:["$","link","25",{"rel":"icon","href":"/favicon.ico?favicon.2358rsjq3s2wb.ico","sizes":"48x48","type":"image/x-icon"}]
+1f:["$","link","26",{"rel":"icon","href":"/favicon.ico"}]
+20:["$","link","27",{"rel":"icon","href":"/favicon-16.png","sizes":"16x16","type":"image/png"}]
+21:["$","link","28",{"rel":"icon","href":"/favicon-32.png","sizes":"32x32","type":"image/png"}]
+22:["$","link","29",{"rel":"icon","href":"/icon-192.png","sizes":"192x192","type":"image/png"}]
+23:["$","link","30",{"rel":"icon","href":"/icon-512.png","sizes":"512x512","type":"image/png"}]
+24:["$","link","31",{"rel":"apple-touch-icon","href":"/apple-touch-icon.png","sizes":"180x180","type":"image/png"}]
+25:["$","$L2d","32",{}]
+26:["$","meta",null,{"name":"next-size-adjust","content":""}]
+28:["$","$1","c",{"children":[null,["$","$L2e",null,{"parallelRouterKey":"children","template":["$","$L2f",null,{}]}]]}]
+2c:true
 8:300
 8:C
-1f:0
-1b:"$undefined"
-1d:"$undefined"
+2b:0
+27:"$undefined"
+29:"$undefined"
 7:"$undefined"
