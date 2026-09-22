@@ -6,7 +6,7 @@ export function TrustMarkets() {
     <Section tone="surface" className="!py-10 sm:!py-12">
       <Container>
         <p className="text-center text-sm font-medium text-muted">
-          Designed for education institutions across Africa and beyond.
+          Designed for institutions across Africa and beyond.
         </p>
         <ul className="mt-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 sm:gap-x-8">
           {siteConfig.markets.display.map((market) => (
@@ -19,7 +19,7 @@ export function TrustMarkets() {
           ))}
         </ul>
         <p className="mt-4 text-center text-xs text-muted-soft">
-          {siteConfig.positioning}
+          {siteConfig.positioning} Built in Africa. Relevant internationally.
         </p>
       </Container>
     </Section>

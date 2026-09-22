@@ -11,19 +11,25 @@ const solutions = [
     href: "/solutions/schools",
     title: "Schools",
     description:
-      "Primary, secondary, high, private and independent schools that need learner management, academics and parent visibility in one place.",
+      "Primary, secondary, high, private and independent schools — grade, class, teacher and subject terminology.",
   },
   {
     href: "/solutions/colleges",
     title: "Colleges",
     description:
-      "Private colleges, TVET-style institutions and vocational providers with more complex programmes and administrative workflows.",
+      "Private colleges, TVET-style and vocational providers — programme, module, lecturer and semester terminology.",
   },
   {
     href: "/solutions/training-institutions",
     title: "Training institutions",
     description:
-      "Academies, skills centres and professional training organisations that need structured learner and programme management.",
+      "Academies, skills centres and professional training organisations.",
+  },
+  {
+    href: "/solutions/multi-campus",
+    title: "Multi-campus organisations",
+    description:
+      "School and college groups operating across multiple sites with scoped campus access.",
   },
 ];
 
@@ -34,9 +40,9 @@ export function SolutionsPreview() {
         <SectionHeading
           eyebrow="Solutions"
           title="Built for schools and colleges — not one or the other"
-          description="The same platform adapts to different institution types, academic structures and administrative models."
+          description="The same platform adapts to different institution types and academic language."
         />
-        <div className="mt-10 grid gap-4 md:grid-cols-3">
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {solutions.map((item) => (
             <Link
               key={item.href}
@@ -49,9 +55,6 @@ export function SolutionsPreview() {
               <p className="mt-3 text-sm leading-relaxed text-muted">
                 {item.description}
               </p>
-              <span className="mt-5 inline-flex text-sm font-medium text-brand">
-                Explore solution
-              </span>
             </Link>
           ))}
         </div>

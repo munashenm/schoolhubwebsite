@@ -42,6 +42,16 @@ const solutions = [
       "Professional training organisations",
     ],
   },
+  {
+    href: "/solutions/multi-campus",
+    title: "Multi-campus organisations",
+    items: [
+      "School groups",
+      "College groups",
+      "Multi-site training organisations",
+      "Campus-scoped administration",
+    ],
+  },
 ];
 
 export default function SolutionsPage() {
@@ -56,7 +66,7 @@ export default function SolutionsPage() {
       <PageHero
         eyebrow="Solutions"
         title="Configured for how your institution operates"
-        description="SchoolHub serves schools, colleges and training institutions with the same core platform — adapted to different academic and administrative models."
+        description="SchoolHub serves schools, colleges, training institutions and multi-campus organisations — with terminology that fits schools and colleges without forcing one model on the other."
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Solutions" },
@@ -64,7 +74,7 @@ export default function SolutionsPage() {
       />
       <Section>
         <Container>
-          <div className="grid gap-6 lg:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {solutions.map((solution) => (
               <Link
                 key={solution.href}

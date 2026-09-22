@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BrandLogo } from "@/components/ui/BrandLogo";
 import { Container } from "@/components/ui/Section";
 import { siteConfig } from "@/lib/config";
 import { footerNav } from "@/lib/navigation";
@@ -48,14 +49,11 @@ export function Footer() {
       <Container className="py-14 lg:py-16">
         <div className="grid gap-10 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <Link
-              href="/"
-              className="font-display text-lg font-semibold tracking-tight"
-            >
-              {siteConfig.name}
-            </Link>
-            <p className="mt-3 max-w-sm text-sm leading-relaxed text-white/65">
-              {siteConfig.primaryTerminology}. {siteConfig.positioning}
+            <div className="rounded-lg bg-white/95 p-2 inline-flex">
+              <BrandLogo href="/" className="h-12 sm:h-14" />
+            </div>
+            <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/65">
+              {siteConfig.shortTerminology}. {siteConfig.positioning}
             </p>
             <p className="mt-5 text-sm text-white/55">
               {siteConfig.name} is developed and supported by{" "}

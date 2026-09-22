@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { Button } from "@/components/ui/Button";
 import { FinalCta, JsonLd, PageHero } from "@/components/ui/PagePrimitives";
 import { Container, Section, SectionHeading } from "@/components/ui/Section";
-import { siteConfig } from "@/lib/config";
-import { communicationFeatures, optionalModules } from "@/lib/content";
+import { StatusBadge } from "@/components/ui/StatusBadge";
+import { siteConfig, statusLabels } from "@/lib/config";
+import { communicationFeatures } from "@/lib/content";
 import { defaultDescriptions, pageMeta } from "@/lib/pages";
 import { breadcrumbJsonLd } from "@/lib/seo";
 
@@ -24,8 +25,8 @@ export default function IntegrationsPage() {
       />
       <PageHero
         eyebrow="Integrations"
-        title="Connect SchoolHub to the way your institution already works"
-        description="Start with core platform communication. Add optional integrations and institution-specific extensions as your deployment grows."
+        title="Connect SchoolHub to how your institution already works"
+        description="SMS and email are available. SA-SAMS, payments and access control follow a clear roadmap — without unsupported certification claims."
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Integrations" },
@@ -35,8 +36,8 @@ export default function IntegrationsPage() {
         <Container className="grid gap-10 lg:grid-cols-2">
           <div>
             <SectionHeading
-              title="In-platform communication"
-              description="Announcements and notifications keep students, parents and staff informed. SMS, WhatsApp or email channel integrations are treated as integration-ready / optional integrations — not assumed defaults."
+              title="Messaging integrations"
+              description="Keep students, parents and staff informed with channels that are actually available today."
             />
             <ul className="mt-6 space-y-2">
               {communicationFeatures.map((item) => (
@@ -45,12 +46,23 @@ export default function IntegrationsPage() {
                 </li>
               ))}
             </ul>
+            <div className="mt-6 flex flex-wrap gap-2">
+              <StatusBadge status={siteConfig.integrationStatus.sms} />
+              <StatusBadge status={siteConfig.integrationStatus.email} />
+            </div>
+            <p className="mt-4 text-xs text-muted-soft">
+              WhatsApp and push notifications:{" "}
+              {statusLabels[siteConfig.featureStatus.whatsapp].toLowerCase()}.
+            </p>
           </div>
           {siteConfig.saSams.enabled ? (
             <div className="rounded-xl border border-border bg-surface p-6 sm:p-8">
-              <p className="text-xs font-semibold uppercase tracking-wide text-muted-soft">
-                Configurable · South Africa
-              </p>
+              <div className="flex flex-wrap items-center gap-3">
+                <p className="text-xs font-semibold uppercase tracking-wide text-muted-soft">
+                  South Africa
+                </p>
+                <StatusBadge status={siteConfig.saSams.status} />
+              </div>
               <h2 className="mt-2 text-xl font-semibold text-ink">
                 {siteConfig.saSams.title}
               </h2>
@@ -60,13 +72,10 @@ export default function IntegrationsPage() {
               <p className="mt-3 text-sm text-muted-soft">
                 {siteConfig.saSams.detail}
               </p>
-              <p className="mt-4 text-xs font-medium text-brand">
-                Current status: {siteConfig.saSams.status.replace("-", " ")}
-              </p>
               <p className="mt-4 text-xs text-muted-soft">
-                Update wording in <code>src/lib/config.ts</code> as integration
-                work progresses. Do not claim government certification unless
-                formally obtained.
+                Update wording in <code>src/lib/config.ts</code> when integration
+                goes live. Do not claim government certification unless formally
+                obtained.
               </p>
             </div>
           ) : null}
@@ -75,17 +84,25 @@ export default function IntegrationsPage() {
       <Section tone="surface">
         <Container>
           <SectionHeading
-            title="Optional modules & extensions"
-            description="SchoolHub can grow with add-ons and custom development from Cyber Developers."
+            title="Planned & optional integrations"
+            description="Named payment gateways are only published when integrations are live."
           />
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {optionalModules.map((module) => (
+          <div className="mt-8 grid gap-4 sm:grid-cols-3">
+            {(
+              [
+                ["Payments", siteConfig.integrationStatus.payments],
+                ["Access control", siteConfig.integrationStatus.accessControl],
+                ["SA-SAMS", siteConfig.integrationStatus.saSams],
+              ] as const
+            ).map(([title, status]) => (
               <article
-                key={module.title}
+                key={title}
                 className="rounded-xl border border-border bg-background p-5"
               >
-                <h3 className="text-sm font-semibold text-ink">{module.title}</h3>
-                <p className="mt-2 text-sm text-muted">{module.description}</p>
+                <div className="flex items-center justify-between gap-3">
+                  <h3 className="font-semibold text-ink">{title}</h3>
+                  <StatusBadge status={status} />
+                </div>
               </article>
             ))}
           </div>

@@ -49,6 +49,21 @@ export default function SecurityPage() {
       <Section tone="surface">
         <Container className="max-w-3xl">
           <SectionHeading
+            title="Data backup & recovery"
+            description="Backups are part of a disciplined deployment — without inventing a fixed frequency that may not match every environment."
+          />
+          <div className="mt-6 space-y-3 text-sm leading-relaxed text-muted">
+            <p>
+              Automated database backups, secure backup storage and recovery
+              procedures help protect against accidental data loss where
+              configured for your deployment.
+            </p>
+            <p>
+              Institution-specific backup and retention policies can be
+              discussed as part of implementation and SLA arrangements.
+            </p>
+          </div>
+          <SectionHeading
             title="Careful wording on compliance"
             description="We describe engineering practices — not certificates we have not earned."
           />

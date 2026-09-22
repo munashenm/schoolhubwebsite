@@ -14,8 +14,8 @@ export function SuperAdminSection() {
           <div className="lg:col-span-5">
             <SectionHeading
               eyebrow="Enterprise administration"
-              title="Granular Role-Based Access Control"
-              description="SchoolHub includes a powerful Super Administrator role. Decide who can access which modules, who can change records, and which functions stay restricted — without writing custom software for every permission request."
+              title="Your Institution. Your Rules."
+              description="Control exactly which users can access each module and what actions they are permitted to perform — with a powerful Super Administrator role and granular role-based access control."
             />
             <p className="mt-6 text-sm leading-relaxed text-muted">
               In plain terms: each staff member sees what their job requires.

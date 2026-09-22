@@ -6,8 +6,10 @@ import {
   PageHero,
 } from "@/components/ui/PagePrimitives";
 import { ProductScreenshot } from "@/components/ui/ProductScreenshot";
+import { StatusBadge } from "@/components/ui/StatusBadge";
 import { Container, Section, SectionHeading } from "@/components/ui/Section";
-import { differentiators, platformModules } from "@/lib/content";
+import { differentiators, homeProductAreas } from "@/lib/content";
+import { siteConfig } from "@/lib/config";
 import { defaultDescriptions, pageMeta } from "@/lib/pages";
 import { breadcrumbJsonLd } from "@/lib/seo";
 
@@ -29,7 +31,7 @@ export default function PlatformPage() {
       <PageHero
         eyebrow="Platform"
         title="One platform for institutional operations"
-        description="SchoolHub is a School & College Management Platform — a student information system, academic management layer and administration suite working together."
+        description="SchoolHub is a School, College & Education Management Platform — admissions, academics, attendance, communication, finance roadmap, portals and administration working together. Broader than an LMS."
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Platform" },
@@ -40,8 +42,8 @@ export default function PlatformPage() {
           <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
             <div>
               <SectionHeading
-                title="Replace disconnected tools with one operating system for education"
-                description="Admissions, learner records, academics, attendance, portals and reporting should not live in separate silos. SchoolHub keeps them connected."
+                title="Admissions, academics, finance and communication — managed from one platform"
+                description="Replace disconnected tools with one operating system for education institutions."
               />
               <ul className="mt-8 space-y-3">
                 {differentiators.map((item) => (
@@ -53,8 +55,8 @@ export default function PlatformPage() {
               </ul>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Button href="/demo">Request a Demo</Button>
-                <Button href="/features" variant="secondary">
-                  Browse features
+                <Button href="/modules" variant="secondary">
+                  Browse modules
                 </Button>
               </div>
             </div>
@@ -69,20 +71,38 @@ export default function PlatformPage() {
       <Section tone="surface">
         <Container>
           <SectionHeading
-            title="Module landscape"
-            description="Every major operational area is designed to connect — not operate in isolation."
+            title="Major product areas"
+            description="Explore the platform by capability — then open features for full detail and status labels."
           />
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {platformModules.map((module) => (
-              <article
-                key={module.title}
-                className="rounded-xl border border-border bg-background p-5"
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {homeProductAreas.map((area) => (
+              <a
+                key={area.id}
+                href={area.href}
+                className="rounded-xl border border-border bg-background p-5 transition-colors hover:border-border-strong"
               >
-                <h3 className="font-semibold text-ink">{module.title}</h3>
-                <p className="mt-2 text-sm text-muted">{module.description}</p>
-              </article>
+                <p className="text-xs font-semibold text-muted-soft">{area.id}</p>
+                <h3 className="mt-2 font-semibold text-ink">{area.title}</h3>
+                <p className="mt-2 text-sm text-muted">{area.summary}</p>
+              </a>
             ))}
           </div>
+        </Container>
+      </Section>
+      <Section id="mobile">
+        <Container className="rounded-2xl border border-border bg-surface p-8">
+          <div className="flex flex-wrap items-center gap-3">
+            <h2 className="font-display text-2xl font-semibold text-ink">
+              Cloud-based. Available wherever your institution works.
+            </h2>
+            <StatusBadge status={siteConfig.featureStatus.cloudPlatform} />
+          </div>
+          <p className="mt-4 max-w-3xl text-muted">
+            Browser-based access, centralised information and secure sign-in —
+            without depending on a single school computer. Supports multi-location
+            and multi-campus institutions. Native Android &amp; iOS apps are{" "}
+            <StatusBadge status={siteConfig.mobileAppStatus} className="align-middle" />.
+          </p>
         </Container>
       </Section>
       <FinalCta />

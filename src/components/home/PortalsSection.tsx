@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/Section";
 import {
   parentPortalFeatures,
+  staffPortalFeatures,
   studentPortalFeatures,
 } from "@/lib/content";
 
@@ -15,37 +16,39 @@ export function PortalsSection() {
     <Section tone="soft">
       <Container>
         <SectionHeading
-          eyebrow="Student & parent experience"
+          eyebrow="Student, parent & staff portals"
           title="Visibility into the learner’s academic journey"
-          description="Students and guardians get clear access to progress, results, attendance and assignments — not a payment-first portal. Academic visibility is the point."
+          description="Students, guardians and teachers / lecturers get authorised access to progress, results, attendance and assignments. Fees are available where enabled — they are not the sole purpose of the parent portal."
         />
-        <div className="mt-12 grid gap-8 lg:grid-cols-2">
-          <div className="rounded-xl border border-border bg-surface p-6 sm:p-8">
+        <div className="mt-12 grid gap-6 lg:grid-cols-3">
+          <div className="rounded-xl border border-border bg-surface p-6">
             <h3 className="text-lg font-semibold text-ink">Student portal</h3>
-            <p className="mt-2 text-sm text-muted">
-              Learners can follow their own academic work and institutional
-              updates.
-            </p>
-            <div className="mt-6">
-              <FeatureList items={studentPortalFeatures} />
+            <div className="mt-5">
+              <FeatureList items={studentPortalFeatures} className="sm:grid-cols-1" />
             </div>
           </div>
-          <div className="rounded-xl border border-border bg-surface p-6 sm:p-8">
-            <h3 className="text-lg font-semibold text-ink">Parent portal</h3>
-            <p className="mt-2 text-sm text-muted">
-              Guardians stay informed on progress, results, reports and
-              attendance where your institution enables it.
-            </p>
-            <div className="mt-6">
-              <FeatureList items={parentPortalFeatures} />
+          <div className="rounded-xl border border-border bg-surface p-6">
+            <h3 className="text-lg font-semibold text-ink">
+              Teacher / lecturer portal
+            </h3>
+            <div className="mt-5">
+              <FeatureList items={staffPortalFeatures} className="sm:grid-cols-1" />
+            </div>
+          </div>
+          <div className="rounded-xl border border-border bg-surface p-6">
+            <h3 className="text-lg font-semibold text-ink">
+              Parent / guardian portal
+            </h3>
+            <div className="mt-5">
+              <FeatureList items={parentPortalFeatures} className="sm:grid-cols-1" />
             </div>
           </div>
         </div>
         <div className="mt-10">
           <ProductScreenshot
-            title="Learner progress view"
+            title="Portal experience"
             description="Academic journey visibility for authorised portal users."
-            alt="SchoolHub student and parent portal screenshot placeholder"
+            alt="SchoolHub student parent and staff portal screenshot placeholder"
           />
         </div>
       </Container>

@@ -4,6 +4,7 @@ import {
   Section,
   SectionHeading,
 } from "@/components/ui/Section";
+import { StatusBadge } from "@/components/ui/StatusBadge";
 import { siteConfig } from "@/lib/config";
 import { communicationFeatures, optionalModules } from "@/lib/content";
 
@@ -15,8 +16,8 @@ export function IntegrationsOptionalSection() {
           <div>
             <SectionHeading
               eyebrow="Integrations & communication"
-              title="Connected where it matters"
-              description="Announcements and in-platform communication keep students, parents and staff informed. Broader messaging channels can be added as integration-ready / optional integrations when required."
+              title="SMS, email and a clear integration roadmap"
+              description="In-platform communication plus SMS and email keep students, parents and staff informed. WhatsApp, payments and access control are planned or optional."
             />
             <ul className="mt-8 space-y-2.5">
               {communicationFeatures.map((item) => (
@@ -27,9 +28,12 @@ export function IntegrationsOptionalSection() {
             </ul>
             {siteConfig.saSams.enabled ? (
               <div className="mt-8 rounded-xl border border-border bg-background p-5">
-                <p className="text-xs font-semibold uppercase tracking-wide text-muted-soft">
-                  South Africa
-                </p>
+                <div className="flex flex-wrap items-center gap-3">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-muted-soft">
+                    South Africa
+                  </p>
+                  <StatusBadge status={siteConfig.saSams.status} />
+                </div>
                 <h3 className="mt-2 text-base font-semibold text-ink">
                   {siteConfig.saSams.title}
                 </h3>
@@ -37,7 +41,6 @@ export function IntegrationsOptionalSection() {
                   {siteConfig.saSams.summary}
                 </p>
                 <p className="mt-2 text-xs text-muted-soft">
-                  Status: {siteConfig.saSams.status.replace("-", " ")}.{" "}
                   {siteConfig.saSams.detail}
                 </p>
               </div>
@@ -53,7 +56,7 @@ export function IntegrationsOptionalSection() {
             <SectionHeading
               eyebrow="Grow with the institution"
               title="Optional modules and add-ons"
-              description="Start with the core platform. Extend when your campus needs online classes, biometric attendance, visitor management or institution-specific modules."
+              description="Extend when your campus needs mobile apps, biometrics, visitor management or institution-specific modules."
             />
             <div className="mt-8 grid gap-3 sm:grid-cols-2">
               {optionalModules.map((module) => (
