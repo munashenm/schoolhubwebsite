@@ -24,14 +24,20 @@ export function Hero() {
             Manage admissions, learners, academics, attendance, communication,
             finance, reporting and administration from one secure platform.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Button href={siteConfig.cta.primary.href} variant="invert" size="lg">
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <Button
+              href={siteConfig.cta.primary.href}
+              variant="invert"
+              size="lg"
+              className="min-w-[11.5rem] px-7 text-base shadow-lg shadow-black/20"
+            >
               {siteConfig.cta.primary.label}
             </Button>
             <Button
               href={siteConfig.cta.secondary.href}
               variant="outline"
               size="lg"
+              className="border-white/35 text-white/90 hover:bg-white/10"
             >
               {siteConfig.cta.secondary.label}
             </Button>
@@ -42,19 +48,19 @@ export function Hero() {
             organisations.
           </p>
           <ul className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-xs font-medium uppercase tracking-wide text-white/50">
-            <li>Cloud-based</li>
+            <li>Schools &amp; colleges</li>
             <li>Multi-campus ready</li>
             <li>Role-based access</li>
-            <li>Schools &amp; colleges</li>
+            <li>SLA-backed support</li>
           </ul>
         </div>
 
         <div className="mt-12 lg:mt-14">
           <ProductScreenshot
-            src={screenshots.cloudHosted.src}
-            title={screenshots.cloudHosted.title}
-            description={screenshots.cloudHosted.description}
-            alt={screenshots.cloudHosted.alt}
+            src={screenshots.dashboard.src}
+            title={screenshots.dashboard.title}
+            description={screenshots.dashboard.description}
+            alt={screenshots.dashboard.alt}
             aspect="wide"
             priority
           />

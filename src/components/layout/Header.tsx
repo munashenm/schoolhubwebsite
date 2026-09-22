@@ -129,14 +129,6 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-2 md:flex">
-          <Button
-            href={siteConfig.cta.login.href}
-            variant="ghost"
-            size="sm"
-            external
-          >
-            {siteConfig.cta.login.label}
-          </Button>
           <Button href={siteConfig.cta.primary.href} size="sm">
             {siteConfig.cta.primary.label}
           </Button>
@@ -221,9 +213,6 @@ export function Header() {
             ))}
           </nav>
           <div className="mt-4 flex flex-col gap-2 border-t border-border pt-4">
-            <Button href={siteConfig.cta.login.href} variant="secondary" external>
-              {siteConfig.cta.login.label}
-            </Button>
             <Button href={siteConfig.cta.primary.href}>
               {siteConfig.cta.primary.label}
             </Button>

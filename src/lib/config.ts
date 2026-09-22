@@ -215,8 +215,7 @@ export const siteConfig = {
   },
   cta: {
     primary: { label: "Request a Demo", href: "/demo" },
-    secondary: { label: "Explore SchoolHub", href: "/platform" },
-    login: { label: "Login", href: "https://app.schoolhubsa.co.za" },
+    secondary: { label: "Explore the Platform", href: "/platform" },
   },
 } as const;
 

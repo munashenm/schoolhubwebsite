@@ -102,7 +102,7 @@ export function FinalCta({
                 variant="outline"
                 size="lg"
               >
-                Explore SchoolHub
+                {siteConfig.cta.secondary.label}
               </Button>
             </div>
           </div>

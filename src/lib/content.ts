@@ -611,16 +611,14 @@ export const moduleGroups: {
 
 export const differentiators = [
   "Schools and colleges on one platform",
-  "Modular architecture that can grow with you",
-  "Granular role-based permissions",
-  "Online admissions",
-  "Student, teacher / lecturer and parent portals",
-  "Finance and fees roadmap",
-  "HR and payroll roadmap",
-  "Multi-campus architecture",
-  "Custom integrations and module development",
-  "SLA-backed support through Cyber Developers",
-  "International configuration for different education systems",
+  "Online applications and enrolment",
+  "Granular Super Admin permissions",
+  "Student, parent and teacher / lecturer portals",
+  "Multi-campus architecture for institution groups",
+  "Finance, fees and payroll modules",
+  "Custom modules and integrations via Cyber Developers",
+  "International academic configuration",
+  "SLA-backed support from Cyber Developers",
 ] as const;
 
 export const communicationFeatures = [

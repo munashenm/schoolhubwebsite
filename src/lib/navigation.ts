@@ -77,7 +77,6 @@ export const footerNav = {
     { label: "Features", href: "/features" },
     { label: "Integrations", href: "/integrations" },
     { label: "Security", href: "/security" },
-    { label: "Login", href: "https://app.schoolhubsa.co.za", external: true },
   ],
   solutions: [
     { label: "Schools", href: "/solutions/schools" },
