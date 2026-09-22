@@ -34,5 +34,6 @@ jobs:
         with:
           folder: out
           branch: cpanel-deploy
-          single-commit: true
+          # Keep history so cPanel Git can pull without force-update failures
+          single-commit: false
           clean: true
