@@ -64,7 +64,10 @@ export function organizationJsonLd() {
       {
         "@type": "ContactPoint",
         email: siteConfig.email.sales,
+        telephone: siteConfig.phone.display,
         contactType: "sales",
+        areaServed: ["ZA", "ZW", "NA", "BW", "AF", "EU"],
+        availableLanguage: ["English"],
       },
     ],
   };

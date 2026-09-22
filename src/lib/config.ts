@@ -30,9 +30,13 @@ export const siteConfig = {
     height: 220,
   },
   email: {
-    sales: "sales@schoolhubsa.co.za",
-    support: "support@schoolhubsa.co.za",
-    general: "info@schoolhubsa.co.za",
+    sales: "sales@cyberdevelopers.co.za",
+    support: "sales@cyberdevelopers.co.za",
+    general: "sales@cyberdevelopers.co.za",
+  },
+  phone: {
+    display: "087 550 1813",
+    href: "tel:+27875501813",
   },
   parentCompany: {
     name: "Cyber Developers",

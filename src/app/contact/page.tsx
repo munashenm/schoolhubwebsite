@@ -44,7 +44,7 @@ export default function ContactPage() {
             </ul>
             <div className="mt-8 space-y-3 text-sm text-muted">
               <p>
-                Sales:{" "}
+                Email:{" "}
                 <a
                   className="font-medium text-brand hover:underline"
                   href={`mailto:${siteConfig.email.sales}`}
@@ -53,12 +53,12 @@ export default function ContactPage() {
                 </a>
               </p>
               <p>
-                General:{" "}
+                Phone:{" "}
                 <a
                   className="font-medium text-brand hover:underline"
-                  href={`mailto:${siteConfig.email.general}`}
+                  href={siteConfig.phone.href}
                 >
-                  {siteConfig.email.general}
+                  {siteConfig.phone.display}
                 </a>
               </p>
               <p>

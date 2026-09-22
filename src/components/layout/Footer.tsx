@@ -67,6 +67,18 @@ export function Footer() {
               </a>
               .
             </p>
+            <p className="mt-4 text-sm text-white/65">
+              <a
+                href={`mailto:${siteConfig.email.sales}`}
+                className="hover:text-white"
+              >
+                {siteConfig.email.sales}
+              </a>
+              <span className="mx-2 text-white/30">·</span>
+              <a href={siteConfig.phone.href} className="hover:text-white">
+                {siteConfig.phone.display}
+              </a>
+            </p>
           </div>
 
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-4 lg:col-span-8">

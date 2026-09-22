@@ -50,6 +50,15 @@ export default function DemoPage() {
                 {siteConfig.email.sales}
               </a>
             </p>
+            <p className="mt-2 text-sm text-muted">
+              Or call{" "}
+              <a
+                href={siteConfig.phone.href}
+                className="font-medium text-brand hover:underline"
+              >
+                {siteConfig.phone.display}
+              </a>
+            </p>
           </div>
           <div className="lg:col-span-7">
             <DemoForm />
