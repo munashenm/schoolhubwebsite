@@ -558,6 +558,7 @@ export const moduleGroups: {
       { title: "Reporting", description: "Academic, attendance and administrative reports.", status: "available", href: "/features#reporting" },
       { title: "Portals", description: "Student, parent and teacher / lecturer access.", status: "available", href: "/features#portals" },
       { title: "Administration", description: "Institution setup, users and configuration.", status: "available", href: "/features#security" },
+      { title: "Mobile Apps", description: "Android and iOS apps for students, parents and staff.", status: "available", href: "/platform#mobile" },
     ],
   },
   {
@@ -596,7 +597,6 @@ export const moduleGroups: {
     title: "Future / optional",
     description: "Extend SchoolHub as your institution grows.",
     items: [
-      { title: "Mobile Apps", description: "Android & iOS apps for students, parents and staff.", status: "coming-soon", href: "/platform#mobile" },
       { title: "Biometrics", description: "Optional biometric attendance capture.", status: "optional" },
       { title: "Library", description: "Institution-specific library module.", status: "optional" },
       { title: "Transport", description: "Transport management extension.", status: "optional" },
@@ -635,7 +635,7 @@ export const communicationFeatures = [
 export const optionalModules = [
   {
     title: "Mobile Apps",
-    description: "Android & iOS apps — coming soon. Web remains mobile-browser accessible.",
+    description: "Android and iOS apps for students, parents and staff. Web remains mobile-browser accessible.",
   },
   {
     title: "Biometric Attendance",

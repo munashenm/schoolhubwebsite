@@ -21,6 +21,7 @@ export function createMetadata({ title, description, path, noIndex }: PageSeo) {
       : `${title} | ${siteConfig.name}`;
 
   const url = absoluteUrl(path);
+  const ogImage = absoluteUrl("/images/branding/og-default.png");
 
   return {
     title: fullTitle,
@@ -31,19 +32,38 @@ export function createMetadata({ title, description, path, noIndex }: PageSeo) {
     },
     robots: noIndex
       ? { index: false, follow: false }
-      : { index: true, follow: true },
+      : {
+          index: true,
+          follow: true,
+          googleBot: {
+            index: true,
+            follow: true,
+            "max-image-preview": "large" as const,
+            "max-snippet": -1,
+            "max-video-preview": -1,
+          },
+        },
     openGraph: {
       title: fullTitle,
       description,
       url,
       siteName: siteConfig.name,
       locale: siteConfig.locale,
-      type: "website",
+      type: "website" as const,
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: siteConfig.name,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image" as const,
       title: fullTitle,
       description,
+      images: [ogImage],
     },
   };
 }

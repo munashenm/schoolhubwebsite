@@ -107,7 +107,7 @@ export const siteConfig = {
     multiCampus: "planned",
     cloudPlatform: "available",
     backups: "available",
-    mobileApp: "coming-soon",
+    mobileApp: "available",
     biometrics: "optional",
     library: "optional",
     transport: "optional",
@@ -122,7 +122,7 @@ export const siteConfig = {
     payments: "planned",
     accessControl: "planned",
   } satisfies Record<string, CapabilityStatus>,
-  mobileAppStatus: "coming-soon" as CapabilityStatus,
+  mobileAppStatus: "available" as CapabilityStatus,
   /**
    * SA-SAMS wording — update as integration progress changes.
    */

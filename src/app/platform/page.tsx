@@ -103,12 +103,11 @@ export default function PlatformPage() {
           <p className="mt-4 max-w-3xl text-muted">
             Browser-based access, centralised information and secure sign-in —
             without depending on a single school computer. Supports multi-location
-            and multi-campus institutions. Native Android &amp; iOS apps are on
-            the roadmap.
+            and multi-campus institutions. SchoolHub Mobile is available for
+            Android and iOS.
           </p>
-          <div className="mt-6 flex flex-wrap items-center gap-4">
-            <StatusBadge status={siteConfig.mobileAppStatus} />
-            <StoreBadges comingSoon />
+          <div className="mt-6">
+            <StoreBadges />
           </div>
         </Container>
       </Section>

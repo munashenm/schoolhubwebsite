@@ -2,8 +2,6 @@ import { cn } from "@/lib/utils";
 
 type StoreBadgesProps = {
   className?: string;
-  /** Visual only — apps are not live yet */
-  comingSoon?: boolean;
 };
 
 function AppleIcon({ className }: { className?: string }) {
@@ -32,18 +30,18 @@ function AndroidIcon({ className }: { className?: string }) {
   );
 }
 
-export function StoreBadges({ className, comingSoon = true }: StoreBadgesProps) {
+export function StoreBadges({ className }: StoreBadgesProps) {
   return (
     <div className={cn("flex flex-wrap items-center gap-3", className)}>
       <div
         className="inline-flex min-w-[9.5rem] items-center gap-3 rounded-xl border border-border bg-ink px-4 py-3 text-white"
         role="img"
-        aria-label={comingSoon ? "iOS app coming soon" : "Download on the App Store"}
+        aria-label="SchoolHub on the App Store for iOS"
       >
         <AppleIcon className="h-7 w-7 shrink-0" />
         <span className="text-left leading-tight">
           <span className="block text-[10px] uppercase tracking-wide text-white/60">
-            {comingSoon ? "Coming soon" : "Download on the"}
+            Download on the
           </span>
           <span className="block text-sm font-semibold">App Store</span>
         </span>
@@ -51,12 +49,12 @@ export function StoreBadges({ className, comingSoon = true }: StoreBadgesProps) 
       <div
         className="inline-flex min-w-[9.5rem] items-center gap-3 rounded-xl border border-border bg-ink px-4 py-3 text-white"
         role="img"
-        aria-label={comingSoon ? "Android app coming soon" : "Get it on Google Play"}
+        aria-label="SchoolHub on Google Play for Android"
       >
         <AndroidIcon className="h-7 w-7 shrink-0 text-[#3DDC84]" />
         <span className="text-left leading-tight">
           <span className="block text-[10px] uppercase tracking-wide text-white/60">
-            {comingSoon ? "Coming soon" : "Get it on"}
+            Get it on
           </span>
           <span className="block text-sm font-semibold">Google Play</span>
         </span>

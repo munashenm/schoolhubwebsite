@@ -18,7 +18,6 @@ import {
   Section,
   SectionHeading,
 } from "@/components/ui/Section";
-import { StatusBadge } from "@/components/ui/StatusBadge";
 import { StoreBadges } from "@/components/ui/StoreBadges";
 import { siteConfig } from "@/lib/config";
 import { faqJsonLd } from "@/lib/seo";
@@ -81,18 +80,17 @@ export default function HomePage() {
           <div className="lg:col-span-7">
             <div className="flex items-center gap-3">
               <p className="text-sm font-medium text-brand">SchoolHub Mobile</p>
-              <StatusBadge status={siteConfig.mobileAppStatus} />
             </div>
             <h2 className="font-display mt-2 text-3xl font-semibold tracking-tight text-ink">
-              Android &amp; iOS on the roadmap
+              SchoolHub Mobile for Android &amp; iOS
             </h2>
             <p className="mt-4 max-w-2xl text-muted">
-              Native apps for students, parents and teachers / lecturers are
-              coming soon. Meanwhile, the SchoolHub web platform is accessible
-              from mobile browsers wherever your institution works.
+              Native apps for students, parents and teachers / lecturers —
+              alongside the SchoolHub web platform, which remains accessible from
+              mobile browsers wherever your institution works.
             </p>
             <div className="mt-6">
-              <StoreBadges comingSoon />
+              <StoreBadges />
             </div>
           </div>
           <div className="flex flex-col items-start justify-end gap-3 lg:col-span-5 lg:items-end">
