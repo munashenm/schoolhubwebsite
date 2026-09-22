@@ -119,7 +119,7 @@ export function Header() {
           : "border-transparent bg-surface/80 backdrop-blur-sm",
       )}
     >
-      <Container className="flex h-16 items-center justify-between gap-4 lg:h-[4.25rem]">
+      <Container className="flex h-[4.5rem] items-center justify-between gap-4 lg:h-[5rem]">
         <BrandLogo priority />
 
         <nav className="hidden items-center gap-0.5 xl:flex" aria-label="Primary">
@@ -157,7 +157,7 @@ export function Header() {
       <div
         id="mobile-menu"
         className={cn(
-          "max-h-[calc(100vh-4rem)] overflow-y-auto border-t border-border bg-surface xl:hidden",
+          "max-h-[calc(100vh-5rem)] overflow-y-auto border-t border-border bg-surface xl:hidden",
           open ? "block" : "hidden",
         )}
       >

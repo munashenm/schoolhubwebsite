@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/Button";
 import { Badge, Container, Section, SectionHeading } from "@/components/ui/Section";
 import { ProductScreenshot } from "@/components/ui/ProductScreenshot";
 import { homeProductAreas } from "@/lib/content";
+import { screenshots } from "@/lib/screenshots";
 import { siteConfig } from "@/lib/config";
 import { cn } from "@/lib/utils";
 
@@ -50,9 +51,11 @@ export function Hero() {
 
         <div className="mt-12 lg:mt-14">
           <ProductScreenshot
-            title="SchoolHub operations overview"
-            description="Administration, academics and learner services in one workspace."
-            alt="SchoolHub SA platform dashboard placeholder awaiting product screenshot"
+            src={screenshots.cloudHosted.src}
+            title={screenshots.cloudHosted.title}
+            description={screenshots.cloudHosted.description}
+            alt={screenshots.cloudHosted.alt}
+            aspect="wide"
             priority
           />
         </div>

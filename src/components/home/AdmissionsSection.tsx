@@ -7,6 +7,7 @@ import {
   SectionHeading,
 } from "@/components/ui/Section";
 import { admissionsFeatures } from "@/lib/content";
+import { screenshots } from "@/lib/screenshots";
 
 export function AdmissionsSection() {
   return (
@@ -27,9 +28,10 @@ export function AdmissionsSection() {
             </div>
           </div>
           <ProductScreenshot
-            title="Admissions workspace"
-            description="Review and track online applications."
-            alt="SchoolHub admissions and online applications screenshot placeholder"
+            src={screenshots.applications.src}
+            title={screenshots.applications.title}
+            description={screenshots.applications.description}
+            alt={screenshots.applications.alt}
           />
         </div>
       </Container>

@@ -48,7 +48,7 @@ export function ProductScreenshot({
               src={src}
               alt={alt}
               fill
-              className="object-cover object-top"
+              className="object-contain object-top bg-[#eef2f6]"
               sizes="(max-width: 768px) 100vw, 960px"
               priority={priority}
             />

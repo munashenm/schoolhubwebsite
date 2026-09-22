@@ -50,7 +50,7 @@ export function Footer() {
         <div className="grid gap-10 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <div className="rounded-lg bg-white/95 p-2 inline-flex">
-              <BrandLogo href="/" className="h-12 sm:h-14" />
+              <BrandLogo href="/" className="h-14 sm:h-16" />
             </div>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/65">
               {siteConfig.shortTerminology}. {siteConfig.positioning}

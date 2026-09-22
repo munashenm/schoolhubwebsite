@@ -1,4 +1,5 @@
 import { Hero, ProductAreasSection } from "@/components/home/Hero";
+import { ScreenshotGallery } from "@/components/home/ScreenshotGallery";
 import { AdmissionsSection } from "@/components/home/AdmissionsSection";
 import { PortalsSection } from "@/components/home/PortalsSection";
 import { SuperAdminSection } from "@/components/home/SuperAdminSection";
@@ -46,6 +47,7 @@ export default function HomePage() {
       <Hero />
       <TrustMarkets />
       <ProductAreasSection />
+      <ScreenshotGallery />
 
       <Section tone="surface">
         <Container className="grid gap-8 lg:grid-cols-2 lg:items-center">

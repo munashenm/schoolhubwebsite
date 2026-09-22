@@ -10,6 +10,7 @@ import {
   staffPortalFeatures,
   studentPortalFeatures,
 } from "@/lib/content";
+import { screenshots } from "@/lib/screenshots";
 
 export function PortalsSection() {
   return (
@@ -44,11 +45,18 @@ export function PortalsSection() {
             </div>
           </div>
         </div>
-        <div className="mt-10">
+        <div className="mt-10 grid gap-6 lg:grid-cols-2">
           <ProductScreenshot
-            title="Portal experience"
-            description="Academic journey visibility for authorised portal users."
-            alt="SchoolHub student parent and staff portal screenshot placeholder"
+            src={screenshots.collegeStudent.src}
+            title={screenshots.collegeStudent.title}
+            description={screenshots.collegeStudent.description}
+            alt={screenshots.collegeStudent.alt}
+          />
+          <ProductScreenshot
+            src={screenshots.teacherRegister.src}
+            title={screenshots.teacherRegister.title}
+            description={screenshots.teacherRegister.description}
+            alt={screenshots.teacherRegister.alt}
           />
         </div>
       </Container>

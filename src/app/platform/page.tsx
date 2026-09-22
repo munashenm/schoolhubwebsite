@@ -10,6 +10,7 @@ import { StatusBadge } from "@/components/ui/StatusBadge";
 import { Container, Section, SectionHeading } from "@/components/ui/Section";
 import { differentiators, homeProductAreas } from "@/lib/content";
 import { siteConfig } from "@/lib/config";
+import { screenshots } from "@/lib/screenshots";
 import { defaultDescriptions, pageMeta } from "@/lib/pages";
 import { breadcrumbJsonLd } from "@/lib/seo";
 
@@ -61,9 +62,10 @@ export default function PlatformPage() {
               </div>
             </div>
             <ProductScreenshot
-              title="Platform overview"
-              alt="SchoolHub platform overview screenshot placeholder"
-              description="Core institutional modules in one interface."
+              src={screenshots.dashboard.src}
+              title={screenshots.dashboard.title}
+              alt={screenshots.dashboard.alt}
+              description={screenshots.dashboard.description}
             />
           </div>
         </Container>
