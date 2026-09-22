@@ -9,8 +9,9 @@ type PageSeo = {
 
 export function absoluteUrl(path = "") {
   const base = siteConfig.url.replace(/\/$/, "");
-  if (!path || path === "/") return base;
-  return `${base}${path.startsWith("/") ? path : `/${path}`}`;
+  if (!path || path === "/") return `${base}/`;
+  const normalized = path.startsWith("/") ? path : `/${path}`;
+  return `${base}${normalized.endsWith("/") ? normalized : `${normalized}/`}`;
 }
 
 export function createMetadata({ title, description, path, noIndex }: PageSeo) {

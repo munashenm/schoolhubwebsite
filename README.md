@@ -53,6 +53,24 @@ npm run start
 npm run lint
 ```
 
-## Deployment
+## Deployment (cPanel)
 
-Build for production with `npm run build`. Deploy the Next.js app to your preferred host and point `schoolhubsa.co.za` at it.
+This site builds as a **static export** for Apache/cPanel hosting.
+
+### Automatic build
+
+Pushing to `main` runs GitHub Actions, which builds the site and publishes the static files to the **`cpanel-deploy`** branch.
+
+### cPanel Git pull
+
+1. In cPanel → **Git Version Control**, clone (or open) this repository into a folder such as `schoolhubwebsite`.
+2. Set the deployment branch to **`cpanel-deploy`** (not `main`).
+3. Deploy / pull into the document root for **schoolhubsa.co.za** (usually `public_html` or the domain’s addon domain folder).
+4. Confirm `.htaccess` is present in the web root after deploy.
+
+Manual local static build:
+
+```bash
+npm run build
+# Output is in /out — upload contents to the domain document root
+```
