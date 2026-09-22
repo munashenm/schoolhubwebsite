@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/PagePrimitives";
 import { ProductScreenshot } from "@/components/ui/ProductScreenshot";
 import { StatusBadge } from "@/components/ui/StatusBadge";
+import { StoreBadges } from "@/components/ui/StoreBadges";
 import { Container, Section, SectionHeading } from "@/components/ui/Section";
 import { differentiators, homeProductAreas } from "@/lib/content";
 import { siteConfig } from "@/lib/config";
@@ -102,9 +103,13 @@ export default function PlatformPage() {
           <p className="mt-4 max-w-3xl text-muted">
             Browser-based access, centralised information and secure sign-in —
             without depending on a single school computer. Supports multi-location
-            and multi-campus institutions. Native Android &amp; iOS apps are{" "}
-            <StatusBadge status={siteConfig.mobileAppStatus} className="align-middle" />.
+            and multi-campus institutions. Native Android &amp; iOS apps are on
+            the roadmap.
           </p>
+          <div className="mt-6 flex flex-wrap items-center gap-4">
+            <StatusBadge status={siteConfig.mobileAppStatus} />
+            <StoreBadges comingSoon />
+          </div>
         </Container>
       </Section>
       <FinalCta />
