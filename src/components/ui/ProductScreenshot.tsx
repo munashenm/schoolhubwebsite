@@ -6,41 +6,27 @@ type ProductScreenshotProps = {
   description?: string;
   alt: string;
   src?: string | null;
-  /** Frame shape. Live app captures are ultrawide (~2.2:1). */
-  aspect?: "video" | "wide" | "square" | "ultrawide" | "auto";
-  /** How the image fills the frame. Cover fills; contain letterboxes. */
-  fit?: "cover" | "contain";
+  /** Intrinsic pixel size — keeps the full UI visible without crop/zoom. */
+  width?: number;
+  height?: number;
   className?: string;
   priority?: boolean;
 };
 
-const aspectMap = {
-  video: "aspect-[16/10]",
-  wide: "aspect-[16/9]",
-  square: "aspect-[4/3]",
-  /** Matches live SchoolHub app captures (~1024×465). */
-  ultrawide: "aspect-[11/5]",
-};
-
 /**
- * Reusable product screenshot frame.
- * Pass a real `src` when assets are available under /public/images/screenshots/.
- * Without `src`, renders a structured placeholder ready for later insertion.
+ * Browser-chrome product screenshot.
+ * Real captures render at their natural aspect ratio so nothing is cropped or over-zoomed.
  */
 export function ProductScreenshot({
   title,
   description,
   alt,
   src,
-  aspect = "video",
-  fit = "cover",
+  width = 1280,
+  height = 720,
   className,
   priority,
 }: ProductScreenshotProps) {
-  const isLiveCapture = Boolean(src?.includes("/live-"));
-  const resolvedAspect =
-    aspect === "auto" ? (isLiveCapture ? "ultrawide" : "video") : aspect;
-
   return (
     <figure className={cn("w-full", className)}>
       <div className="overflow-hidden rounded-xl border border-border bg-surface shadow-[0_24px_60px_-28px_rgba(10,22,40,0.45)]">
@@ -52,32 +38,26 @@ export function ProductScreenshot({
             app.schoolhubsa.co.za
           </div>
         </div>
-        <div
-          className={cn(
-            "relative overflow-hidden bg-[#e8edf2]",
-            aspectMap[resolvedAspect as keyof typeof aspectMap],
-          )}
-        >
-          {src ? (
+        {src ? (
+          <div className="bg-[#e8edf2]">
             <Image
               src={src}
               alt={alt}
-              fill
-              className={cn(
-                fit === "cover"
-                  ? "object-cover object-top"
-                  : "object-contain object-top",
-              )}
+              width={width}
+              height={height}
+              className="block h-auto w-full"
               sizes="(max-width: 768px) 100vw, 1100px"
               priority={priority}
             />
-          ) : (
-            <div
-              className="absolute inset-0 flex flex-col"
-              role="img"
-              aria-label={alt}
-            >
-              <div className="flex border-b border-border/80 bg-white">
+          </div>
+        ) : (
+          <div
+            className="relative aspect-[16/10] bg-[#eef2f6]"
+            role="img"
+            aria-label={alt}
+          >
+            <div className="absolute inset-0 flex flex-col">
+              <div className="flex flex-1 border-b border-border/80 bg-white">
                 <div className="hidden w-44 shrink-0 border-r border-border/80 p-4 sm:block">
                   <div className="h-3 w-24 rounded bg-ink/10" />
                   <div className="mt-5 space-y-2.5">
@@ -91,13 +71,8 @@ export function ProductScreenshot({
                   </div>
                 </div>
                 <div className="flex-1 p-4 sm:p-6">
-                  <div className="flex items-center justify-between gap-4">
-                    <div>
-                      <div className="h-3 w-28 rounded bg-brand/20" />
-                      <div className="mt-3 h-5 w-48 rounded bg-ink/15 sm:w-64" />
-                    </div>
-                    <div className="h-8 w-24 rounded-md bg-brand/80" />
-                  </div>
+                  <div className="h-3 w-28 rounded bg-brand/20" />
+                  <div className="mt-3 h-5 w-48 rounded bg-ink/15 sm:w-64" />
                   <div className="mt-6 grid gap-3 sm:grid-cols-3">
                     {[1, 2, 3].map((i) => (
                       <div
@@ -106,41 +81,20 @@ export function ProductScreenshot({
                       >
                         <div className="h-2.5 w-16 rounded bg-ink/10" />
                         <div className="mt-3 h-6 w-12 rounded bg-ink/15" />
-                        <div className="mt-3 h-2 w-full rounded bg-ink/[0.05]" />
-                      </div>
-                    ))}
-                  </div>
-                  <div className="mt-4 overflow-hidden rounded-lg border border-border bg-white">
-                    <div className="grid grid-cols-4 gap-2 border-b border-border bg-[#f8fafb] px-3 py-2">
-                      {[1, 2, 3, 4].map((i) => (
-                        <div key={i} className="h-2 rounded bg-ink/10" />
-                      ))}
-                    </div>
-                    {[1, 2, 3, 4].map((row) => (
-                      <div
-                        key={row}
-                        className="grid grid-cols-4 gap-2 border-b border-border/70 px-3 py-3 last:border-0"
-                      >
-                        {[1, 2, 3, 4].map((col) => (
-                          <div
-                            key={col}
-                            className="h-2 rounded bg-ink/[0.06]"
-                          />
-                        ))}
                       </div>
                     ))}
                   </div>
                 </div>
               </div>
-              <div className="mt-auto border-t border-dashed border-border bg-white/70 px-4 py-3 text-center">
+              <div className="border-t border-dashed border-border bg-white/70 px-4 py-3 text-center">
                 <p className="text-xs font-medium text-ink-soft">{title}</p>
                 <p className="mt-0.5 text-[11px] text-muted-soft">
-                  Screenshot placeholder — replace with live SchoolHub UI
+                  Screenshot placeholder
                 </p>
               </div>
             </div>
-          )}
-        </div>
+          </div>
+        )}
       </div>
       {(description || !src) && (
         <figcaption className="mt-3 text-sm text-muted">

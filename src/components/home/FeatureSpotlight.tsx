@@ -19,6 +19,8 @@ type FeatureSpotlightProps = {
     title: string;
     description: string;
     alt: string;
+    width?: number;
+    height?: number;
   };
   ctaHref?: string;
   ctaLabel?: string;
@@ -71,8 +73,8 @@ export function FeatureSpotlight({
             title={screenshot.title}
             description={screenshot.description}
             alt={screenshot.alt}
-            aspect="auto"
-            fit="cover"
+            width={screenshot.width}
+            height={screenshot.height}
           />
         </div>
       </Container>

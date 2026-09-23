@@ -67,8 +67,8 @@ export default function PlatformPage() {
               title={screenshots.dashboard.title}
               alt={screenshots.dashboard.alt}
               description={screenshots.dashboard.description}
-              aspect="ultrawide"
-              fit="cover"
+              width={screenshots.dashboard.width}
+              height={screenshots.dashboard.height}
             />
           </div>
         </Container>

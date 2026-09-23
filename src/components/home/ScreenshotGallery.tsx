@@ -8,13 +8,13 @@ import { screenshots } from "@/lib/screenshots";
 
 const featured = [
   screenshots.dashboard,
-  screenshots.analytics,
   screenshots.studentDashboard,
   screenshots.lecturerDashboard,
-  screenshots.studentLogin,
   screenshots.backup,
+  screenshots.studentCard,
   screenshots.applications,
   screenshots.timetable,
+  screenshots.payroll,
 ] as const;
 
 export function ScreenshotGallery() {
@@ -29,13 +29,13 @@ export function ScreenshotGallery() {
         <div className="mt-10 grid gap-8 sm:grid-cols-2">
           {featured.map((shot) => (
             <ProductScreenshot
-              key={shot.src}
+              key={shot.src + shot.title}
               src={shot.src}
               title={shot.title}
               description={shot.description}
               alt={shot.alt}
-              aspect="auto"
-              fit="cover"
+              width={shot.width}
+              height={shot.height}
             />
           ))}
         </div>

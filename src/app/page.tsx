@@ -111,8 +111,8 @@ export default function HomePage() {
             title={screenshots.cloudHosted.title}
             description={screenshots.cloudHosted.description}
             alt={screenshots.cloudHosted.alt}
-            aspect="wide"
-            fit="cover"
+            width={screenshots.cloudHosted.width}
+            height={screenshots.cloudHosted.height}
           />
         </Container>
       </Section>
