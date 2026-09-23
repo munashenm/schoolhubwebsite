@@ -51,12 +51,16 @@ export function PortalsSection() {
             title={screenshots.studentDashboard.title}
             description={screenshots.studentDashboard.description}
             alt={screenshots.studentDashboard.alt}
+            aspect="ultrawide"
+            fit="cover"
           />
           <ProductScreenshot
             src={screenshots.lecturerDashboard.src}
             title={screenshots.lecturerDashboard.title}
             description={screenshots.lecturerDashboard.description}
             alt={screenshots.lecturerDashboard.alt}
+            aspect="ultrawide"
+            fit="cover"
           />
         </div>
         <div className="mt-6">
@@ -65,7 +69,8 @@ export function PortalsSection() {
             title={screenshots.studentLogin.title}
             description={screenshots.studentLogin.description}
             alt={screenshots.studentLogin.alt}
-            aspect="wide"
+            aspect="ultrawide"
+            fit="cover"
           />
         </div>
       </Container>

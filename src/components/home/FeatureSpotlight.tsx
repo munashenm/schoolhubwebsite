@@ -71,6 +71,8 @@ export function FeatureSpotlight({
             title={screenshot.title}
             description={screenshot.description}
             alt={screenshot.alt}
+            aspect="auto"
+            fit="cover"
           />
         </div>
       </Container>

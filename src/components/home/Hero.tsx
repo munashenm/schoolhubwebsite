@@ -61,7 +61,8 @@ export function Hero() {
             title={screenshots.dashboard.title}
             description={screenshots.dashboard.description}
             alt={screenshots.dashboard.alt}
-            aspect="wide"
+            aspect="ultrawide"
+            fit="cover"
             priority
           />
         </div>

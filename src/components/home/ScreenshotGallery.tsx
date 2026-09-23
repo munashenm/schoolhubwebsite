@@ -34,7 +34,8 @@ export function ScreenshotGallery() {
               title={shot.title}
               description={shot.description}
               alt={shot.alt}
-              aspect="wide"
+              aspect="auto"
+              fit="cover"
             />
           ))}
         </div>

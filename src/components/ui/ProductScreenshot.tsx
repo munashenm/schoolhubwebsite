@@ -6,7 +6,10 @@ type ProductScreenshotProps = {
   description?: string;
   alt: string;
   src?: string | null;
-  aspect?: "video" | "wide" | "square";
+  /** Frame shape. Live app captures are ultrawide (~2.2:1). */
+  aspect?: "video" | "wide" | "square" | "ultrawide" | "auto";
+  /** How the image fills the frame. Cover fills; contain letterboxes. */
+  fit?: "cover" | "contain";
   className?: string;
   priority?: boolean;
 };
@@ -15,6 +18,8 @@ const aspectMap = {
   video: "aspect-[16/10]",
   wide: "aspect-[16/9]",
   square: "aspect-[4/3]",
+  /** Matches live SchoolHub app captures (~1024×465). */
+  ultrawide: "aspect-[11/5]",
 };
 
 /**
@@ -28,9 +33,14 @@ export function ProductScreenshot({
   alt,
   src,
   aspect = "video",
+  fit = "cover",
   className,
   priority,
 }: ProductScreenshotProps) {
+  const isLiveCapture = Boolean(src?.includes("/live-"));
+  const resolvedAspect =
+    aspect === "auto" ? (isLiveCapture ? "ultrawide" : "video") : aspect;
+
   return (
     <figure className={cn("w-full", className)}>
       <div className="overflow-hidden rounded-xl border border-border bg-surface shadow-[0_24px_60px_-28px_rgba(10,22,40,0.45)]">
@@ -42,14 +52,23 @@ export function ProductScreenshot({
             app.schoolhubsa.co.za
           </div>
         </div>
-        <div className={cn("relative bg-[#eef2f6]", aspectMap[aspect])}>
+        <div
+          className={cn(
+            "relative overflow-hidden bg-[#e8edf2]",
+            aspectMap[resolvedAspect as keyof typeof aspectMap],
+          )}
+        >
           {src ? (
             <Image
               src={src}
               alt={alt}
               fill
-              className="object-contain object-top bg-[#eef2f6]"
-              sizes="(max-width: 768px) 100vw, 960px"
+              className={cn(
+                fit === "cover"
+                  ? "object-cover object-top"
+                  : "object-contain object-top",
+              )}
+              sizes="(max-width: 768px) 100vw, 1100px"
               priority={priority}
             />
           ) : (

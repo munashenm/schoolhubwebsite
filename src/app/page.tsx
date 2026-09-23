@@ -112,6 +112,7 @@ export default function HomePage() {
             description={screenshots.cloudHosted.description}
             alt={screenshots.cloudHosted.alt}
             aspect="wide"
+            fit="cover"
           />
         </Container>
       </Section>

@@ -50,6 +50,8 @@ export function SecurityPreview() {
             title={screenshots.backup.title}
             description={screenshots.backup.description}
             alt={screenshots.backup.alt}
+            aspect="ultrawide"
+            fit="cover"
           />
         </div>
       </Container>
