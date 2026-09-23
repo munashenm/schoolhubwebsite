@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import { siteConfig } from "@/lib/config";
+import { submitMarketingForm } from "@/lib/forms";
 import { contactEnquiryTypes, institutionTypes } from "@/lib/navigation";
 import { cn } from "@/lib/utils";
 
@@ -10,16 +11,55 @@ const fieldClass =
 
 const labelClass = "block text-sm font-medium text-ink";
 
+function Honeypot() {
+  return (
+    <div className="absolute -left-[9999px] top-auto h-0 w-0 overflow-hidden" aria-hidden>
+      <label htmlFor="website">Website</label>
+      <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
+    </div>
+  );
+}
+
 type DemoFormProps = {
   className?: string;
 };
 
 export function DemoForm({ className }: DemoFormProps) {
   const [submitted, setSubmitted] = useState(false);
+  const [pending, setPending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  function onSubmit(e: FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    // Front-end capture for now — wire to API / CRM later.
+    setError(null);
+    setPending(true);
+
+    const form = e.currentTarget;
+    const fd = new FormData(form);
+
+    const result = await submitMarketingForm({
+      formType: "demo",
+      firstName: String(fd.get("firstName") || ""),
+      lastName: String(fd.get("lastName") || ""),
+      name: `${fd.get("firstName") || ""} ${fd.get("lastName") || ""}`.trim(),
+      institutionName: String(fd.get("institutionName") || ""),
+      institution: String(fd.get("institutionName") || ""),
+      institutionType: String(fd.get("institutionType") || ""),
+      country: String(fd.get("country") || ""),
+      email: String(fd.get("email") || ""),
+      phone: String(fd.get("phone") || ""),
+      learners: String(fd.get("learners") || ""),
+      message: String(fd.get("message") || ""),
+      website: String(fd.get("website") || ""),
+    });
+
+    setPending(false);
+
+    if (!result.ok) {
+      setError(result.error);
+      return;
+    }
+
     setSubmitted(true);
   }
 
@@ -43,6 +83,13 @@ export function DemoForm({ className }: DemoFormProps) {
             href={`mailto:${siteConfig.email.sales}`}
           >
             {siteConfig.email.sales}
+          </a>{" "}
+          or call{" "}
+          <a
+            className="font-medium text-brand underline-offset-2 hover:underline"
+            href={siteConfig.phone.href}
+          >
+            {siteConfig.phone.display}
           </a>
           .
         </p>
@@ -54,11 +101,12 @@ export function DemoForm({ className }: DemoFormProps) {
     <form
       onSubmit={onSubmit}
       className={cn(
-        "rounded-xl border border-border bg-surface p-6 sm:p-8",
+        "relative rounded-xl border border-border bg-surface p-6 sm:p-8",
         className,
       )}
       noValidate
     >
+      <Honeypot />
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="firstName" className={labelClass}>
@@ -179,14 +227,20 @@ export function DemoForm({ className }: DemoFormProps) {
           />
         </div>
       </div>
+      {error ? (
+        <p className="mt-4 text-sm text-red-700" role="alert">
+          {error}
+        </p>
+      ) : null}
       <button
         type="submit"
-        className="mt-6 inline-flex h-12 w-full items-center justify-center rounded-md bg-brand px-6 text-[15px] font-medium text-white transition-colors hover:bg-brand-strong sm:w-auto"
+        disabled={pending}
+        className="mt-6 inline-flex h-12 w-full items-center justify-center rounded-md bg-brand px-6 text-[15px] font-medium text-white transition-colors hover:bg-brand-strong disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
       >
-        Request Your SchoolHub Demo
+        {pending ? "Sending…" : "Request Your SchoolHub Demo"}
       </button>
       <p className="mt-3 text-xs text-muted">
-        Submitted details are handled by the SchoolHub team at{" "}
+        Submitted details are emailed to the SchoolHub team at{" "}
         {siteConfig.parentCompany.name}.
       </p>
     </form>
@@ -195,9 +249,34 @@ export function DemoForm({ className }: DemoFormProps) {
 
 export function ContactForm({ className }: { className?: string }) {
   const [submitted, setSubmitted] = useState(false);
+  const [pending, setPending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  function onSubmit(e: FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    setError(null);
+    setPending(true);
+
+    const form = e.currentTarget;
+    const fd = new FormData(form);
+
+    const result = await submitMarketingForm({
+      formType: "contact",
+      name: String(fd.get("name") || ""),
+      email: String(fd.get("email") || ""),
+      institution: String(fd.get("institution") || ""),
+      enquiryType: String(fd.get("enquiryType") || ""),
+      message: String(fd.get("message") || ""),
+      website: String(fd.get("website") || ""),
+    });
+
+    setPending(false);
+
+    if (!result.ok) {
+      setError(result.error);
+      return;
+    }
+
     setSubmitted(true);
   }
 
@@ -215,7 +294,14 @@ export function ContactForm({ className }: { className?: string }) {
         </h2>
         <p className="mt-3 text-muted">
           Thanks for getting in touch. We will respond using the email you
-          provided.
+          provided. For urgent matters, call{" "}
+          <a
+            className="font-medium text-brand underline-offset-2 hover:underline"
+            href={siteConfig.phone.href}
+          >
+            {siteConfig.phone.display}
+          </a>
+          .
         </p>
       </div>
     );
@@ -225,10 +311,11 @@ export function ContactForm({ className }: { className?: string }) {
     <form
       onSubmit={onSubmit}
       className={cn(
-        "rounded-xl border border-border bg-surface p-6 sm:p-8",
+        "relative rounded-xl border border-border bg-surface p-6 sm:p-8",
         className,
       )}
     >
+      <Honeypot />
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="contactName" className={labelClass}>
@@ -299,11 +386,17 @@ export function ContactForm({ className }: { className?: string }) {
           />
         </div>
       </div>
+      {error ? (
+        <p className="mt-4 text-sm text-red-700" role="alert">
+          {error}
+        </p>
+      ) : null}
       <button
         type="submit"
-        className="mt-6 inline-flex h-12 items-center justify-center rounded-md bg-brand px-6 text-[15px] font-medium text-white transition-colors hover:bg-brand-strong"
+        disabled={pending}
+        className="mt-6 inline-flex h-12 items-center justify-center rounded-md bg-brand px-6 text-[15px] font-medium text-white transition-colors hover:bg-brand-strong disabled:cursor-not-allowed disabled:opacity-70"
       >
-        Send Message
+        {pending ? "Sending…" : "Send Message"}
       </button>
     </form>
   );

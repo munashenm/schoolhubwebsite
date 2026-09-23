@@ -17,7 +17,7 @@ export function DifferentiationSection() {
         <SectionHeading
           eyebrow="Why institutions choose SchoolHub"
           title="Built for schools and colleges — with room to grow"
-          description="One platform for academic operations and institutional administration: multi-campus groups, granular permissions, online applications, finance, custom modules and SLA-backed support from Cyber Developers."
+          description="One platform for academic operations and institutional administration: online applications, portals, granular permissions, custom modules and SLA-backed support from Cyber Developers — with finance and multi-campus on the roadmap."
         />
         <div className="mt-10 grid gap-4 md:grid-cols-3">
           {featured.map((item) => (

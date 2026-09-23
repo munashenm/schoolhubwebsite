@@ -16,7 +16,7 @@ export const siteConfig = {
   tagline: "One Platform. Your Entire Institution.",
   positioning: "Designed for institutions everywhere.",
   description:
-    "SchoolHub SA is a complete school, college and education management platform for admissions, learners, academics, attendance, communication, finance, reporting and administration.",
+    "SchoolHub SA is a school, college and education management platform for admissions, learners, academics, attendance, communication, reporting and administration — with finance, fees and payroll modules on the product roadmap.",
   primaryTerminology: "School, College & Education Management Platform",
   shortTerminology: "School & College Management Platform",
   domain: "https://schoolhubsa.co.za",
@@ -158,12 +158,14 @@ export const siteConfig = {
     cta: { label: "Discuss Your SLA", href: "/contact" },
   },
   pricing: {
-    enabled: false,
+    enabled: true,
     currency: "ZAR",
     currencySymbol: "R",
     billingPeriod: "per learner / month",
     showContactForVolume: true,
-    volumeNote: "Contact us for volume pricing.",
+    volumeNote: "Larger campuses and groups can request volume pricing.",
+    disclaimer:
+      "Starter pricing is indicative. Final fees depend on modules, learners and support level — confirm with sales.",
     plans: [
       {
         id: "starter",

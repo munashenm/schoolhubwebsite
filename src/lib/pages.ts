@@ -42,7 +42,7 @@ export const defaultDescriptions = {
   training: `Learner management for academies, skills centres and professional training organisations.`,
   multiCampus: `Multi-campus school and college management for organisations operating across multiple sites.`,
   integrations: `SchoolHub integrations including SMS, email and SA-SAMS integration roadmap for South African institutions.`,
-  pricing: `SchoolHub pricing for schools and colleges. Contact us for institution and volume pricing.`,
+  pricing: `SchoolHub pricing for schools and colleges — Starter from R10 per learner / month, plus Professional and Enterprise packages. Contact us for volume pricing.`,
   security: `Security practices for SchoolHub: authentication, granular RBAC, cloud deployment, backups and POPIA/GDPR-conscious configuration.`,
   support: `SchoolHub support and configurable SLAs with Cyber Developers.`,
   about: `About SchoolHub SA — a school, college and education management platform developed by Cyber Developers.`,

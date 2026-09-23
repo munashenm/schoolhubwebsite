@@ -35,7 +35,7 @@ const homeFaqs = [
   {
     question: "What is SchoolHub SA?",
     answer:
-      "SchoolHub SA is a school, college and education management platform covering admissions, learners, academics, attendance, communication, finance, reporting and administration — broader than an LMS.",
+      "SchoolHub SA is a school, college and education management platform covering admissions, learners, academics, attendance, communication, reporting and administration — broader than an LMS. Finance and multi-campus modules are on the product roadmap.",
   },
   {
     question: "Is SchoolHub only for South African schools?",
@@ -45,7 +45,7 @@ const homeFaqs = [
   {
     question: "Does SchoolHub include finance and payroll?",
     answer:
-      "Finance, fees, HR and payroll are part of the SchoolHub product modules and are delivered according to implementation status. Core academic and administration modules are available today.",
+      "Finance, fees, HR and payroll are planned SchoolHub product modules. Core academic and administration modules are available today — ask during a demo about roadmap timing for your institution.",
   },
 ];
 

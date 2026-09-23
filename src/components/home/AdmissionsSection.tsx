@@ -53,13 +53,13 @@ export function FinanceSpotlight() {
   return (
     <FeatureSpotlight
       id="finance"
-      eyebrow="Finance & fees"
-      title="Fees, finance and payroll in the same institutional stack"
-      description="Give finance teams and parents a clearer view of balances and collections — with payroll and HR available as your institution expands the platform."
+      eyebrow="Finance & fees · roadmap"
+      title="Fees, finance and payroll on the SchoolHub roadmap"
+      description="Core academic and administration modules are available today. Fee structures, balances, collections and payroll are planned product modules — ask us about timing for your institution."
       items={financeItems}
       screenshot={screenshots.analytics}
       tone="surface"
-      note="Finance, fees and payroll capabilities are delivered according to your institution’s module configuration and implementation status."
+      note="Status: planned. Finance, fees, HR and payroll are not claimed as fully live capabilities until your implementation confirms them."
     />
   );
 }
@@ -101,15 +101,15 @@ export function MultiCampusSpotlight() {
   return (
     <FeatureSpotlight
       id="multi-campus"
-      eyebrow="Multi-campus"
-      title="One organisation. Multiple campuses."
-      description="Built for school and college groups that need campus-level operations with central oversight — Organisation → Campus A / B / C."
+      eyebrow="Multi-campus · roadmap"
+      title="Built for institution groups — rolling out by design"
+      description="SchoolHub’s architecture targets Organisation → Campus A / B / C with campus-scoped records and central oversight. Multi-campus administration is on the product roadmap for school and college groups."
       items={multiCampusItems}
       screenshot={screenshots.moreReasons}
       tone="soft"
       ctaHref="/solutions/multi-campus"
-      ctaLabel="Explore multi-campus"
-      note="Multi-campus management is part of the SchoolHub architecture and module rollout for institution groups."
+      ctaLabel="Explore multi-campus plans"
+      note="Status: planned. Discuss multi-campus timing and scope with Cyber Developers during your demo."
     />
   );
 }

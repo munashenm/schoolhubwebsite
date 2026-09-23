@@ -22,7 +22,8 @@ export function Hero() {
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/72 sm:text-lg">
             Manage admissions, learners, academics, attendance, communication,
-            finance, reporting and administration from one secure platform.
+            reporting and administration from one secure platform — with finance
+            and multi-campus modules on the SchoolHub roadmap.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <Button
@@ -44,12 +45,11 @@ export function Hero() {
           </div>
           <p className="mt-6 text-sm text-white/55">
             Designed for institutions everywhere. Suitable for schools,
-            colleges, academies, training institutions and multi-campus
-            organisations.
+            colleges, academies and training institutions.
           </p>
           <ul className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-xs font-medium uppercase tracking-wide text-white/50">
             <li>Schools &amp; colleges</li>
-            <li>Multi-campus ready</li>
+            <li>Online admissions</li>
             <li>Role-based access</li>
             <li>SLA-backed support</li>
           </ul>
