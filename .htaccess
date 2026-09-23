@@ -18,6 +18,8 @@ Options -MultiViews -Indexes
 
   # Trailing slash for Next.js static export directories
   RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} !\.(php|xml|txt|ico|png|jpe?g|gif|webp|svg|css|js|map|webmanifest)$ [NC]
   RewriteCond %{REQUEST_URI} !(.*)/$
   RewriteRule ^(.*)$ $1/ [L,R=301]
 </IfModule>
