@@ -57,7 +57,7 @@ export function FinanceSpotlight() {
       title="Fees, finance and payroll in the same institutional stack"
       description="Give finance teams and parents a clearer view of balances and collections — with payroll and HR available as your institution expands the platform."
       items={financeItems}
-      screenshot={screenshots.payroll}
+      screenshot={screenshots.analytics}
       tone="surface"
       note="Finance, fees and payroll capabilities are delivered according to your institution’s module configuration and implementation status."
     />

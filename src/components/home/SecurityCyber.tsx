@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/Button";
+import { ProductScreenshot } from "@/components/ui/ProductScreenshot";
 import {
   Container,
   Section,
@@ -6,39 +7,50 @@ import {
 } from "@/components/ui/Section";
 import { siteConfig } from "@/lib/config";
 import { securityPrinciples } from "@/lib/content";
+import { screenshots } from "@/lib/screenshots";
 
 export function SecurityPreview() {
   return (
     <Section>
       <Container>
-        <SectionHeading
-          eyebrow="Security"
-          title="Institutional data deserves disciplined access"
-          description="SchoolHub is engineered around authentication, role-based permissions, controlled cloud deployment and audit-friendly administration — without overstating certifications we do not hold."
-        />
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {securityPrinciples.map((item) => (
-            <article
-              key={item.title}
-              className="rounded-xl border border-border bg-surface p-5"
-            >
-              <h3 className="text-sm font-semibold text-ink">{item.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">
-                {item.description}
-              </p>
-            </article>
-          ))}
-        </div>
-        <p className="mt-8 max-w-3xl text-sm text-muted">
-          Deployments can be configured with POPIA-conscious data-handling
-          practices for South Africa and GDPR-conscious practices for European
-          institutions. This describes engineering posture — not a formal legal
-          certification claim.
-        </p>
-        <div className="mt-6">
-          <Button href="/security" variant="secondary">
-            Read security overview
-          </Button>
+        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
+          <div>
+            <SectionHeading
+              eyebrow="Security"
+              title="Institutional data deserves disciplined access"
+              description="SchoolHub is engineered around authentication, role-based permissions, controlled cloud deployment and audit-friendly administration — without overstating certifications we do not hold."
+            />
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              {securityPrinciples.map((item) => (
+                <article
+                  key={item.title}
+                  className="rounded-xl border border-border bg-surface p-5"
+                >
+                  <h3 className="text-sm font-semibold text-ink">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted">
+                    {item.description}
+                  </p>
+                </article>
+              ))}
+            </div>
+            <p className="mt-8 max-w-3xl text-sm text-muted">
+              Deployments can be configured with POPIA-conscious data-handling
+              practices for South Africa and GDPR-conscious practices for European
+              institutions. This describes engineering posture — not a formal legal
+              certification claim.
+            </p>
+            <div className="mt-6">
+              <Button href="/security" variant="secondary">
+                Read security overview
+              </Button>
+            </div>
+          </div>
+          <ProductScreenshot
+            src={screenshots.backup.src}
+            title={screenshots.backup.title}
+            description={screenshots.backup.description}
+            alt={screenshots.backup.alt}
+          />
         </div>
       </Container>
     </Section>

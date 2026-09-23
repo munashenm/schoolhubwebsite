@@ -7,14 +7,14 @@ import {
 import { screenshots } from "@/lib/screenshots";
 
 const featured = [
-  screenshots.timetable,
-  screenshots.assignments,
-  screenshots.results,
-  screenshots.messages,
-  screenshots.studentCard,
-  screenshots.visitors,
-  screenshots.payroll,
+  screenshots.dashboard,
+  screenshots.analytics,
+  screenshots.studentDashboard,
+  screenshots.lecturerDashboard,
+  screenshots.studentLogin,
   screenshots.backup,
+  screenshots.applications,
+  screenshots.timetable,
 ] as const;
 
 export function ScreenshotGallery() {

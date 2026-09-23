@@ -1,13 +1,22 @@
 /**
  * Real SchoolHub product / demo screenshots.
  * Files live in /public/images/screenshots/
+ * Prefer `live-*` assets from the production app when available.
  */
 export const screenshots = {
   dashboard: {
-    src: "/images/screenshots/demo-01-keep-homepage.png",
-    title: "Institution dashboard",
-    description: "Open your institution and run day-to-day operations from one workspace.",
-    alt: "SchoolHub SA institution dashboard showing core school and college modules",
+    src: "/images/screenshots/live-admin-dashboard.jpg",
+    title: "Admin dashboard",
+    description:
+      "Licence, backups, SA-SAMS status, learners, staff, classes and outstanding fees in one overview.",
+    alt: "SchoolHub SA admin portal dashboard with licence, backups, integrations and school metrics",
+  },
+  analytics: {
+    src: "/images/screenshots/live-admin-analytics.jpg",
+    title: "Enrolment & fee analytics",
+    description:
+      "Student enrolment trends and fee collection charts for leadership reporting.",
+    alt: "SchoolHub SA admin dashboard showing enrolment trend and fee collection charts",
   },
   institutions: {
     src: "/images/screenshots/demo-01-open-institutions.png",
@@ -46,10 +55,11 @@ export const screenshots = {
     alt: "SchoolHub SA parent portal fee payment view",
   },
   teacherRegister: {
-    src: "/images/screenshots/demo-06-teacher-register.png",
-    title: "Teacher attendance register",
-    description: "Capture class attendance and assessment marks.",
-    alt: "SchoolHub SA teacher portal attendance register and assessments",
+    src: "/images/screenshots/live-lecturer-dashboard.jpg",
+    title: "Lecturer portal",
+    description:
+      "Mark attendance, capture marks, open groups and message learners from one teaching workspace.",
+    alt: "SchoolHub SA lecturer portal dashboard with groups, attendance and marks actions",
   },
   modules: {
     src: "/images/screenshots/demo-07-optional-close.png",
@@ -76,10 +86,11 @@ export const screenshots = {
     alt: "SchoolHub SA timetable management screen",
   },
   studentLogin: {
-    src: "/images/screenshots/demo-11-student-login.png",
-    title: "Student portal",
-    description: "Learners access homework, timetable and more.",
-    alt: "SchoolHub SA student portal login and navigation",
+    src: "/images/screenshots/live-student-login.jpg",
+    title: "Student portal sign-in",
+    description:
+      "Institution-branded learner login with access to timetable, results, fees and notices.",
+    alt: "SchoolHub SA student portal login screen",
   },
   assignments: {
     src: "/images/screenshots/demo-12-assignment.png",
@@ -88,10 +99,11 @@ export const screenshots = {
     alt: "SchoolHub SA student homework assignment submission screen",
   },
   results: {
-    src: "/images/screenshots/demo-13-results.png",
-    title: "Results",
-    description: "Classroom marks and published results for authorised users.",
-    alt: "SchoolHub SA learner portal My Results screen",
+    src: "/images/screenshots/live-admin-analytics.jpg",
+    title: "Reporting & analytics",
+    description:
+      "Enrolment trends and fee collection reporting from live institutional data.",
+    alt: "SchoolHub SA reporting charts for enrolment and fee collection",
   },
   messages: {
     src: "/images/screenshots/demo-14-messages.png",
@@ -112,10 +124,11 @@ export const screenshots = {
     alt: "SchoolHub SA paper savings and digital documents promotion",
   },
   collegeStudent: {
-    src: "/images/screenshots/demo-17-college-student.png",
-    title: "College student portal",
-    description: "Timetable, assignments, attendance and results for colleges.",
-    alt: "SchoolHub SA college student portal dashboard",
+    src: "/images/screenshots/live-student-dashboard.jpg",
+    title: "Student portal",
+    description:
+      "Attendance, averages, fees, assignments, timetable and academic progress for learners.",
+    alt: "SchoolHub SA student portal dashboard with student card, attendance and progress",
   },
   cloudHosted: {
     src: "/images/screenshots/demo-18-cloud-hosted.png",
@@ -124,10 +137,11 @@ export const screenshots = {
     alt: "SchoolHub SA cloud-hosted dashboard accessed from laptop",
   },
   backup: {
-    src: "/images/screenshots/demo-19-backup.png",
+    src: "/images/screenshots/live-backup-restore.jpg",
     title: "Backup & restore",
-    description: "Cloud backups and encrypted backup packages.",
-    alt: "SchoolHub SA backup and restore administration screen",
+    description:
+      "Automatic cloud backups and encrypted offline packages from the admin portal.",
+    alt: "SchoolHub SA backup and restore administration screen with cloud and offline backups",
   },
   smsReminders: {
     src: "/images/screenshots/demo-20-sms-reminders.png",
@@ -144,7 +158,8 @@ export const screenshots = {
   moreReasons: {
     src: "/images/screenshots/demo-22-more-reasons.png",
     title: "Built for real institutions",
-    description: "Auditability, role-based access, offline grace and multi-campus oversight.",
+    description:
+      "Auditability, role-based access, offline grace and multi-campus oversight.",
     alt: "SchoolHub SA features including audit log, roles, offline grace and multi-campus",
   },
   visitors: {
@@ -160,16 +175,31 @@ export const screenshots = {
     alt: "SchoolHub SA staff leave application and HR approval screen",
   },
   studentCard: {
-    src: "/images/screenshots/demo-25-student-card.png",
+    src: "/images/screenshots/live-student-dashboard.jpg",
     title: "Learner identity cards",
-    description: "Generate printable learner cards with photo and barcode.",
-    alt: "SchoolHub SA generate learner identity card preview",
+    description:
+      "Student card with barcode for gate and office use, plus printable PDF.",
+    alt: "SchoolHub SA student portal showing barcode student card",
   },
   certificates: {
     src: "/images/screenshots/demo-26-certificates.png",
     title: "Certificates",
     description: "Issue and download certificates of completion.",
     alt: "SchoolHub SA certificates issue and preview screen",
+  },
+  lecturerDashboard: {
+    src: "/images/screenshots/live-lecturer-dashboard.jpg",
+    title: "Lecturer portal",
+    description:
+      "Teaching workspace for groups, attendance, marks and learner messaging.",
+    alt: "SchoolHub SA lecturer portal dashboard",
+  },
+  studentDashboard: {
+    src: "/images/screenshots/live-student-dashboard.jpg",
+    title: "Student portal dashboard",
+    description:
+      "Learner overview with student card, attendance, fees and academic progress.",
+    alt: "SchoolHub SA student portal dashboard",
   },
 } as const;
 

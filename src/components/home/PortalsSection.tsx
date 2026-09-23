@@ -47,16 +47,25 @@ export function PortalsSection() {
         </div>
         <div className="mt-10 grid gap-6 lg:grid-cols-2">
           <ProductScreenshot
-            src={screenshots.collegeStudent.src}
-            title={screenshots.collegeStudent.title}
-            description={screenshots.collegeStudent.description}
-            alt={screenshots.collegeStudent.alt}
+            src={screenshots.studentDashboard.src}
+            title={screenshots.studentDashboard.title}
+            description={screenshots.studentDashboard.description}
+            alt={screenshots.studentDashboard.alt}
           />
           <ProductScreenshot
-            src={screenshots.teacherRegister.src}
-            title={screenshots.teacherRegister.title}
-            description={screenshots.teacherRegister.description}
-            alt={screenshots.teacherRegister.alt}
+            src={screenshots.lecturerDashboard.src}
+            title={screenshots.lecturerDashboard.title}
+            description={screenshots.lecturerDashboard.description}
+            alt={screenshots.lecturerDashboard.alt}
+          />
+        </div>
+        <div className="mt-6">
+          <ProductScreenshot
+            src={screenshots.studentLogin.src}
+            title={screenshots.studentLogin.title}
+            description={screenshots.studentLogin.description}
+            alt={screenshots.studentLogin.alt}
+            aspect="wide"
           />
         </div>
       </Container>
