@@ -8,13 +8,11 @@ import { screenshots } from "@/lib/screenshots";
 
 const featured = [
   screenshots.dashboard,
+  screenshots.analytics,
   screenshots.studentDashboard,
   screenshots.lecturerDashboard,
   screenshots.backup,
   screenshots.studentCard,
-  screenshots.applications,
-  screenshots.timetable,
-  screenshots.payroll,
 ] as const;
 
 export function ScreenshotGallery() {
