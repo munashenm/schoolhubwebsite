@@ -22,8 +22,8 @@ export function Hero() {
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/72 sm:text-lg">
             Manage admissions, learners, academics, attendance, communication,
-            reporting and administration from one secure platform — with finance
-            and multi-campus modules on the SchoolHub roadmap.
+            fees, payroll, reporting and administration from one secure platform.
+            Multi-campus group administration is on the roadmap.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <Button

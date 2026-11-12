@@ -16,7 +16,7 @@ export const siteConfig = {
   tagline: "One Platform. Your Entire Institution.",
   positioning: "Designed for institutions everywhere.",
   description:
-    "SchoolHub SA is a school, college and education management platform for admissions, learners, academics, attendance, communication, reporting and administration — with finance, fees and payroll modules on the product roadmap.",
+    "SchoolHub SA is a school, college and education management platform for admissions, learners, academics, attendance, communication, fees, payroll, reporting and administration. Multi-campus group administration is on the product roadmap.",
   primaryTerminology: "School, College & Education Management Platform",
   shortTerminology: "School & College Management Platform",
   domain: "https://schoolhubsa.co.za",
@@ -91,12 +91,12 @@ export const siteConfig = {
     studentPortal: "available",
     parentPortal: "available",
     staffPortal: "available",
-    finance: "planned",
-    fees: "planned",
-    paymentGateways: "planned",
-    hr: "planned",
-    leave: "planned",
-    payroll: "planned",
+    finance: "available",
+    fees: "available",
+    paymentGateways: "available",
+    hr: "available",
+    leave: "available",
+    payroll: "available",
     reporting: "available",
     exportPdf: "available",
     exportExcel: "planned",
@@ -107,7 +107,7 @@ export const siteConfig = {
     multiCampus: "planned",
     cloudPlatform: "available",
     backups: "available",
-    mobileApp: "available",
+    mobileApp: "planned",
     biometrics: "optional",
     library: "optional",
     transport: "optional",
@@ -116,24 +116,24 @@ export const siteConfig = {
     gateSecurity: "optional",
   } satisfies Record<string, CapabilityStatus>,
   integrationStatus: {
-    saSams: "roadmap",
+    saSams: "optional",
     sms: "available",
     email: "available",
-    payments: "planned",
+    payments: "available",
     accessControl: "planned",
   } satisfies Record<string, CapabilityStatus>,
-  mobileAppStatus: "available" as CapabilityStatus,
+  mobileAppStatus: "planned" as CapabilityStatus,
   /**
    * SA-SAMS wording — update as integration progress changes.
    */
   saSams: {
     enabled: true,
     title: "SA-SAMS Integration",
-    status: "roadmap" as CapabilityStatus,
+    status: "optional" as CapabilityStatus,
     summary:
-      "Designed with South African school administration requirements in mind, with SA-SAMS integration included in the SchoolHub integration roadmap.",
+      "Schools that already use SA-SAMS can enable an import module for learner data. SchoolHub is not an official Department of Basic Education product and does not claim government certification.",
     detail:
-      "Potential scope includes student data transfer, attendance and marks synchronisation, identifiers and grade/class mapping where implemented. Contact us for the current roadmap status for your institution.",
+      "Where the module is switched on, schools can bring across learner records and related administration fields from a SA-SAMS export. Attendance and marks synchronisation, identifiers and grade mapping depend on that deployment. Ask during a demo what is enabled for your institution.",
   },
   sla: {
     headline: "Software Is Only Part of the Service",

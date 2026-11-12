@@ -82,14 +82,14 @@ export const homeProductAreas = [
     id: "06",
     title: "Finance, Fees & Payroll",
     summary:
-      "Fees, finance and HR/payroll modules — delivered according to your institution’s roadmap.",
+      "Fee structures, balances, statements, payroll views and staff leave — enabled per institution.",
     href: "/features#finance",
     points: [
       "Fee structures & balances",
       "Statements & receipts",
       "Finance reporting",
       "Staff & leave management",
-      "Payroll (planned)",
+      "Payroll views and payslips",
     ],
   },
   {
@@ -110,14 +110,14 @@ export const homeProductAreas = [
     id: "08",
     title: "Cloud, Security & Integrations",
     summary:
-      "Browser-based access, controlled permissions, backups and an integration roadmap including SA-SAMS.",
+      "Browser-based access, controlled permissions, backups, SMS, email and an optional SA-SAMS import.",
     href: "/features#integrations",
     points: [
       "Cloud platform access",
       "Secure authentication",
       "Data backup & recovery",
       "SMS & email integrations",
-      "SA-SAMS integration roadmap",
+      "Optional SA-SAMS learner import",
     ],
   },
 ] as const;
@@ -301,7 +301,7 @@ export const featureCategories = [
     sections: [
       {
         title: "Finance management",
-        status: "planned" as CapabilityStatus,
+        status: "available" as CapabilityStatus,
         items: [
           "Institution finance dashboard",
           "Income & expenses",
@@ -311,11 +311,11 @@ export const featureCategories = [
           "Outstanding balances",
           "Campus and institution-wide finance reporting",
         ],
-        note: "Full accounting capabilities are not claimed until implemented. Multi-currency and multi-year finance are architectural targets.",
+        note: "The admin portal shows fee balances and collections. Full accounting, multi-currency and multi-year finance are not claimed for every deployment.",
       },
       {
         title: "Fees collection",
-        status: "planned" as CapabilityStatus,
+        status: "available" as CapabilityStatus,
         items: [
           "Fee structures by grade / programme / student",
           "Balances, statements & receipts",
@@ -323,7 +323,7 @@ export const featureCategories = [
           "Parent account visibility where enabled",
           "Payment reminders",
         ],
-        note: "Online payment gateways and EFT reconciliation are planned integrations — gateway brands are only named when live.",
+        note: "PayFast, Ozow and Yoco can be enabled per institution. They are not switched on for every school by default.",
       },
     ],
   },
@@ -335,7 +335,7 @@ export const featureCategories = [
     sections: [
       {
         title: "Staff management",
-        status: "planned" as CapabilityStatus,
+        status: "available" as CapabilityStatus,
         items: [
           "Staff profiles & employment information",
           "Departments & roles",
@@ -346,7 +346,7 @@ export const featureCategories = [
       },
       {
         title: "Leave application",
-        status: "planned" as CapabilityStatus,
+        status: "available" as CapabilityStatus,
         items: [
           "Leave requests by type and date",
           "Approval / rejection workflow",
@@ -356,7 +356,7 @@ export const featureCategories = [
       },
       {
         title: "Payroll",
-        status: "planned" as CapabilityStatus,
+        status: "available" as CapabilityStatus,
         items: [
           "Salary profiles",
           "Earnings, deductions & allowances",
@@ -395,7 +395,7 @@ export const featureCategories = [
       },
       {
         title: "Finance & admissions reports",
-        status: "planned" as CapabilityStatus,
+        status: "available" as CapabilityStatus,
         items: [
           "Fee collection & outstanding balances",
           "Income / expenses / payment history",
@@ -515,17 +515,17 @@ export const featureCategories = [
     id: "integrations",
     title: "Integrations",
     description:
-      "SMS, email and a South African SA-SAMS integration roadmap — with optional future channels.",
+      "SMS, email and payment gateways, plus an optional SA-SAMS import for schools that already use it.",
     sections: [
       {
         title: "Messaging integrations",
         status: "available" as CapabilityStatus,
         items: ["SMS", "Email"],
-        note: "WhatsApp, push notifications and payment / access-control integrations are planned or optional.",
+        note: "WhatsApp, push notifications and access control are planned. PayFast, Ozow and Yoco are available when the institution enables them.",
       },
       {
         title: "SA-SAMS",
-        status: "roadmap" as CapabilityStatus,
+        status: "optional" as CapabilityStatus,
         items: [
           "Student data import / export",
           "Attendance synchronisation",
@@ -534,7 +534,7 @@ export const featureCategories = [
           "Grade / class mapping",
           "Academic data transfer",
         ],
-        note: "Not marketed as official partnership, government certification or DBE approval.",
+        note: "Learner import can be enabled where a school uses SA-SAMS. This is not Department of Basic Education certification, and attendance or marks synchronisation depends on the deployment.",
       },
     ],
   },
@@ -558,18 +558,18 @@ export const moduleGroups: {
       { title: "Reporting", description: "Academic, attendance and administrative reports.", status: "available", href: "/features#reporting" },
       { title: "Portals", description: "Student, parent and teacher / lecturer access.", status: "available", href: "/features#portals" },
       { title: "Administration", description: "Institution setup, users and configuration.", status: "available", href: "/features#security" },
-      { title: "Mobile Apps", description: "Android and iOS apps for students, parents and staff.", status: "available", href: "/platform#mobile" },
+      { title: "Mobile Apps", description: "Native App Store and Google Play apps are not listed yet. The web portals work in a mobile browser.", status: "planned", href: "/platform#mobile" },
     ],
   },
   {
     title: "Business modules",
     description: "Commercial and people-operations capabilities.",
     items: [
-      { title: "Fees", description: "Fee structures, balances, statements and tracking.", status: "planned", href: "/features#finance" },
-      { title: "Finance", description: "Institution finance dashboards and reporting.", status: "planned", href: "/features#finance" },
-      { title: "Payroll", description: "Payslips and payroll periods with country-aware architecture.", status: "planned", href: "/features#hr-payroll" },
-      { title: "HR", description: "Staff profiles, departments and employment records.", status: "planned", href: "/features#hr-payroll" },
-      { title: "Leave", description: "Leave requests, approvals and history.", status: "planned", href: "/features#hr-payroll" },
+      { title: "Fees", description: "Fee structures, balances, statements and tracking.", status: "available", href: "/features#finance" },
+      { title: "Finance", description: "Institution finance dashboards and fee collection reporting.", status: "available", href: "/features#finance" },
+      { title: "Payroll", description: "Payroll views and payslips. Country-specific tax compliance is not a blanket claim.", status: "available", href: "/features#hr-payroll" },
+      { title: "HR", description: "Staff profiles, departments and employment records.", status: "available", href: "/features#hr-payroll" },
+      { title: "Leave", description: "Leave requests, approvals and history.", status: "available", href: "/features#hr-payroll" },
     ],
   },
   {
@@ -586,10 +586,10 @@ export const moduleGroups: {
     title: "Integrations",
     description: "Connect SchoolHub to institutional and regional systems.",
     items: [
-      { title: "SA-SAMS", description: "South African administration integration roadmap.", status: "roadmap", href: "/integrations" },
+      { title: "SA-SAMS", description: "Optional learner import for schools that use SA-SAMS. Not a department certification.", status: "optional", href: "/integrations" },
       { title: "SMS", description: "Bulk and targeted SMS communication.", status: "available", href: "/integrations" },
       { title: "Email", description: "Email notifications and announcements.", status: "available", href: "/integrations" },
-      { title: "Payments", description: "Payment gateway integrations when configured.", status: "planned", href: "/integrations" },
+      { title: "Payments", description: "PayFast, Ozow and Yoco, enabled per institution.", status: "available", href: "/integrations" },
       { title: "Access Control", description: "Gate / access control integrations.", status: "planned", href: "/integrations" },
     ],
   },
@@ -615,7 +615,7 @@ export const differentiators = [
   "Granular Super Admin permissions",
   "Student, parent and teacher / lecturer portals",
   "Multi-campus architecture on the product roadmap",
-  "Finance, fees and payroll modules on the roadmap",
+  "Fees, finance, leave and payroll views",
   "Custom modules and integrations via Cyber Developers",
   "International academic configuration",
   "SLA-backed support from Cyber Developers",
@@ -632,8 +632,8 @@ export const communicationFeatures = [
 
 export const optionalModules = [
   {
-    title: "Mobile Apps",
-    description: "Android and iOS apps for students, parents and staff. Web remains mobile-browser accessible.",
+    title: "Mobile access",
+    description: "Web portals work in a mobile browser. Native App Store and Google Play apps are not listed yet.",
   },
   {
     title: "Biometric Attendance",

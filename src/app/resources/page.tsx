@@ -46,7 +46,7 @@ export default function ResourcesPage() {
       <PageHero
         eyebrow="Resources"
         title="Evaluate SchoolHub with clear product information"
-        description="Start with the platform and feature pages. Case studies and a blog can be added here later without changing the site architecture."
+        description="Start with the platform, the feature guide and a demo. Each page states what is available today and what is still planned."
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Resources" },

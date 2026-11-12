@@ -33,7 +33,7 @@ export default function PlatformPage() {
       <PageHero
         eyebrow="Platform"
         title="One platform for institutional operations"
-        description="SchoolHub is a School, College & Education Management Platform — admissions, academics, attendance, communication, finance roadmap, portals and administration working together. Broader than an LMS."
+        description="SchoolHub is a School, College & Education Management Platform — admissions, academics, attendance, communication, fees, payroll, portals and administration working together. Broader than an LMS."
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Platform" },

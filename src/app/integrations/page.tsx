@@ -26,7 +26,7 @@ export default function IntegrationsPage() {
       <PageHero
         eyebrow="Integrations"
         title="Connect SchoolHub to how your institution already works"
-        description="SMS and email are available. SA-SAMS, payments and access control follow a clear roadmap — without unsupported certification claims."
+        description="SMS, email and payment gateways are available. SA-SAMS import is optional for schools that already use it. Access control is still planned."
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Integrations" },
@@ -72,11 +72,6 @@ export default function IntegrationsPage() {
               <p className="mt-3 text-sm text-muted-soft">
                 {siteConfig.saSams.detail}
               </p>
-              <p className="mt-4 text-xs text-muted-soft">
-                Update wording in <code>src/lib/config.ts</code> when integration
-                goes live. Do not claim government certification unless formally
-                obtained.
-              </p>
             </div>
           ) : null}
         </Container>
@@ -84,8 +79,8 @@ export default function IntegrationsPage() {
       <Section tone="surface">
         <Container>
           <SectionHeading
-            title="Planned & optional integrations"
-            description="Named payment gateways are only published when integrations are live."
+            title="Payments and what is still planned"
+            description="PayFast, Ozow and Yoco can be enabled per institution. Access control is planned. SA-SAMS import is optional and is not a government certification."
           />
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
             {(

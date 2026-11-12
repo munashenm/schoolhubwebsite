@@ -33,7 +33,7 @@ export function pageMeta(
 }
 
 export const defaultDescriptions = {
-  platform: `Explore the ${siteConfig.name} school, college and education management platform — admissions, academics, attendance, portals, finance roadmap and administration.`,
+  platform: `Explore the ${siteConfig.name} school, college and education management platform — admissions, academics, attendance, portals, fees, payroll and administration.`,
   features: `SchoolHub features: student management, academics, attendance, communication, finance, HR & payroll, portals, reporting, security and integrations.`,
   modules: `SchoolHub modules for schools and colleges — core, business, operations, integrations and optional add-ons.`,
   solutions: `SchoolHub solutions for schools, colleges, training institutions and multi-campus organisations.`,
@@ -41,7 +41,7 @@ export const defaultDescriptions = {
   colleges: `College management system for private colleges, TVET-style institutions and vocational providers.`,
   training: `Learner management for academies, skills centres and professional training organisations.`,
   multiCampus: `Multi-campus school and college management for organisations operating across multiple sites.`,
-  integrations: `SchoolHub integrations including SMS, email and SA-SAMS integration roadmap for South African institutions.`,
+  integrations: `SchoolHub integrations including SMS, email, PayFast, Ozow and Yoco, plus an optional SA-SAMS import for South African schools.`,
   pricing: `SchoolHub pricing for schools and colleges — Starter from R10 per learner / month, plus Professional and Enterprise packages. Contact us for volume pricing.`,
   security: `Security practices for SchoolHub: authentication, granular RBAC, cloud deployment, backups and POPIA/GDPR-conscious configuration.`,
   support: `SchoolHub support and configurable SLAs with Cyber Developers.`,

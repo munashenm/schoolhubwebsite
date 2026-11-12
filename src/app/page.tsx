@@ -35,7 +35,7 @@ const homeFaqs = [
   {
     question: "What is SchoolHub SA?",
     answer:
-      "SchoolHub SA is a school, college and education management platform covering admissions, learners, academics, attendance, communication, reporting and administration — broader than an LMS. Finance and multi-campus modules are on the product roadmap.",
+      "SchoolHub SA is a school, college and education management platform covering admissions, learners, academics, attendance, communication, fees, payroll, reporting and administration — broader than an LMS. Multi-campus group administration is on the product roadmap.",
   },
   {
     question: "Is SchoolHub only for South African schools?",
@@ -45,7 +45,7 @@ const homeFaqs = [
   {
     question: "Does SchoolHub include finance and payroll?",
     answer:
-      "Finance, fees, HR and payroll are planned SchoolHub product modules. Core academic and administration modules are available today — ask during a demo about roadmap timing for your institution.",
+      "Yes. Fee balances, statements, collections, staff leave and payroll views are part of SchoolHub. PayFast, Ozow and Yoco can be enabled per institution. Ask in a demo which of those are switched on for you, and which payroll rules apply in your country.",
   },
 ];
 
