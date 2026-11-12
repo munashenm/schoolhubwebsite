@@ -17,7 +17,7 @@ export function IntegrationsOptionalSection() {
             <SectionHeading
               eyebrow="Integrations & communication"
               title="SMS, email and a clear integration roadmap"
-              description="In-platform communication plus SMS and email keep students, parents and staff informed. WhatsApp, payments and access control are planned or optional."
+              description="In-platform communication plus SMS and email keep students, parents and staff informed. PayFast, Ozow and Yoco can be enabled per institution. WhatsApp and access control are planned."
             />
             <ul className="mt-8 space-y-2.5">
               {communicationFeatures.map((item) => (

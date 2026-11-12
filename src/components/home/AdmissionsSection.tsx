@@ -53,13 +53,13 @@ export function FinanceSpotlight() {
   return (
     <FeatureSpotlight
       id="finance"
-      eyebrow="Finance & fees · roadmap"
-      title="Fees, finance and payroll on the SchoolHub roadmap"
-      description="Core academic and administration modules are available today. Fee structures, balances, collections and payroll are planned product modules — ask us about timing for your institution."
+      eyebrow="Finance & fees"
+      title="Fees, finance and payroll in the same platform"
+      description="Record fee structures, balances, statements and collections, and give finance and HR their own views for payments, leave and payslips. Payment gateways are switched on per institution."
       items={financeItems}
       screenshot={screenshots.analytics}
       tone="surface"
-      note="Status: planned. Finance, fees, HR and payroll are not claimed as fully live capabilities until your implementation confirms them."
+      note="PayFast, Ozow and Yoco are available when enabled for your institution. Country-specific payroll tax is confirmed during implementation, not assumed for every country."
     />
   );
 }
