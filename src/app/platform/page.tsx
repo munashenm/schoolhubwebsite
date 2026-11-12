@@ -7,7 +7,6 @@ import {
 } from "@/components/ui/PagePrimitives";
 import { ProductScreenshot } from "@/components/ui/ProductScreenshot";
 import { StatusBadge } from "@/components/ui/StatusBadge";
-import { StoreBadges } from "@/components/ui/StoreBadges";
 import { Container, Section, SectionHeading } from "@/components/ui/Section";
 import { differentiators, homeProductAreas } from "@/lib/content";
 import { siteConfig } from "@/lib/config";
@@ -104,13 +103,10 @@ export default function PlatformPage() {
           </div>
           <p className="mt-4 max-w-3xl text-muted">
             Browser-based access, centralised information and secure sign-in —
-            without depending on a single school computer. Supports multi-location
-            and multi-campus institutions. SchoolHub Mobile is available for
-            Android and iOS.
+            without depending on a single school computer. The same portals work
+            in a mobile browser. Native App Store and Google Play apps are not
+            listed for SchoolHub SA.
           </p>
-          <div className="mt-6">
-            <StoreBadges />
-          </div>
         </Container>
       </Section>
       <FinalCta />
