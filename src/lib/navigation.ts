@@ -1,3 +1,5 @@
+import { siteConfig } from "@/lib/config";
+
 export type NavLink = {
   label: string;
   href: string;
@@ -85,6 +87,7 @@ export const footerNav = {
     { label: "Multi-Campus", href: "/solutions/multi-campus" },
   ],
   company: [
+    { label: "Log in", href: siteConfig.applicationUrl, external: true },
     { label: "About", href: "/about" },
     { label: "Support & SLA", href: "/support" },
     { label: "Contact", href: "/contact" },

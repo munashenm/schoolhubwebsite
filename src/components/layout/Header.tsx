@@ -129,6 +129,12 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-2 md:flex">
+          <a
+            href={siteConfig.applicationUrl}
+            className="hidden h-9 items-center rounded-md border border-border-strong bg-surface px-3.5 text-sm font-medium text-ink hover:border-ink/30 lg:inline-flex"
+          >
+            Log in
+          </a>
           <Button href={siteConfig.cta.primary.href} size="sm">
             {siteConfig.cta.primary.label}
           </Button>
@@ -213,6 +219,9 @@ export function Header() {
             ))}
           </nav>
           <div className="mt-4 flex flex-col gap-2 border-t border-border pt-4">
+            <Button href={siteConfig.applicationUrl} variant="secondary">
+              Log in
+            </Button>
             <Button href={siteConfig.cta.primary.href}>
               {siteConfig.cta.primary.label}
             </Button>
