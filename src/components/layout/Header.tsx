@@ -13,6 +13,7 @@ import { cn } from "@/lib/utils";
 
 function DesktopDropdown({ item }: { item: NavItem }) {
   const pathname = usePathname();
+  const [menuOpen, setMenuOpen] = useState(false);
   const active = item.href
     ? pathname === item.href || pathname.startsWith(`${item.href}/`)
     : item.children?.some(
@@ -38,9 +39,21 @@ function DesktopDropdown({ item }: { item: NavItem }) {
   }
 
   return (
-    <div className="group relative">
+    <div
+      className="group relative"
+      onMouseEnter={() => setMenuOpen(true)}
+      onMouseLeave={() => setMenuOpen(false)}
+      onFocus={() => setMenuOpen(true)}
+      onBlur={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
+          setMenuOpen(false);
+        }
+      }}
+    >
       <Link
         href={item.href || item.children[0].href}
+        aria-haspopup="true"
+        aria-expanded={menuOpen}
         className={cn(
           "inline-flex items-center gap-1 rounded-md px-2.5 py-2 text-[13px] font-medium transition-colors",
           active
@@ -166,6 +179,7 @@ export function Header() {
                         setExpanded((v) => (v === item.label ? null : item.label))
                       }
                       aria-expanded={expanded === item.label}
+                      aria-controls={`mobile-${item.label.replace(/[^a-z0-9]+/gi, "-").toLowerCase()}`}
                     >
                       {item.label}
                       <ChevronDown
@@ -176,7 +190,10 @@ export function Header() {
                       />
                     </button>
                     {expanded === item.label ? (
-                      <div className="mb-2 ml-2 space-y-1 border-l border-border pl-3">
+                      <div
+                        id={`mobile-${item.label.replace(/[^a-z0-9]+/gi, "-").toLowerCase()}`}
+                        className="mb-2 ml-2 space-y-1 border-l border-border pl-3"
+                      >
                         {item.children.map((child) =>
                           child.external ? (
                             <a

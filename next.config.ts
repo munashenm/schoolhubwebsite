@@ -7,6 +7,10 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  experimental: {
+    // Lets the unmatched-route page set its own title instead of the homepage title.
+    globalNotFound: true,
+  },
 };
 
 export default nextConfig;
