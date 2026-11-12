@@ -26,8 +26,8 @@ export const siteConfig = {
   logo: {
     src: "/images/branding/schoolhub-sa-logo.png",
     alt: "SchoolHub SA",
-    width: 220,
-    height: 220,
+    width: 677,
+    height: 369,
   },
   email: {
     sales: "sales@cyberdevelopers.co.za",
