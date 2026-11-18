@@ -59,7 +59,7 @@ export default function DataDeletionPage() {
             <h2 id="status-heading" className="text-2xl font-semibold text-ink">Check an existing request</h2>
             <p className="text-sm text-muted">
               Enter your reference and the email address supplied in the original request.
-              The status checker shows only the request's status, not your private details.
+              The status checker shows only the request&apos;s status, not your private details.
             </p>
             <PublicDeletionStatusForm />
           </section>
