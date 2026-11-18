@@ -1,10 +1,80 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import { siteConfig } from "@/lib/config";
 import { submitMarketingForm } from "@/lib/forms";
 import { contactEnquiryTypes, institutionTypes } from "@/lib/navigation";
 import { cn } from "@/lib/utils";
+
+type CaptchaChallenge = {
+  id: string;
+  prompt: string;
+};
+
+function CaptchaFields() {
+  const [challenge, setChallenge] = useState<CaptchaChallenge | null>(null);
+  const [loadError, setLoadError] = useState(false);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    async function load() {
+      try {
+        const res = await fetch("/captcha.php", {
+          headers: { Accept: "application/json" },
+          cache: "no-store",
+        });
+        const data = (await res.json()) as {
+          ok?: boolean;
+          id?: string;
+          prompt?: string;
+        };
+        if (cancelled) return;
+        if (!res.ok || !data.ok || !data.id || !data.prompt) {
+          setLoadError(true);
+          return;
+        }
+        setChallenge({ id: data.id, prompt: data.prompt });
+        setLoadError(false);
+      } catch {
+        if (!cancelled) setLoadError(true);
+      }
+    }
+
+    void load();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  return (
+    <div className="sm:col-span-2">
+      <label htmlFor="captchaAnswer" className={labelClass}>
+        {challenge?.prompt ?? "Human check"}
+      </label>
+      <input type="hidden" name="captchaId" value={challenge?.id ?? ""} />
+      <input
+        id="captchaAnswer"
+        name="captchaAnswer"
+        inputMode="numeric"
+        autoComplete="off"
+        required
+        className={fieldClass}
+        placeholder="Enter the answer"
+      />
+      {loadError ? (
+        <p className="mt-2 text-xs text-red-700" role="alert">
+          The check could not be loaded. Email {siteConfig.email.sales} or call{" "}
+          {siteConfig.phone.display}.
+        </p>
+      ) : (
+        <p className="mt-2 text-xs text-muted">
+          This stops automated submissions. The answer is checked on our server.
+        </p>
+      )}
+    </div>
+  );
+}
 
 const fieldClass =
   "mt-1.5 w-full rounded-md border border-border-strong bg-white px-3.5 py-2.5 text-sm text-ink shadow-sm placeholder:text-muted-soft focus:border-brand focus:outline-none focus:ring-2 focus:ring-[var(--ring)]";
@@ -28,6 +98,7 @@ export function DemoForm({ className }: DemoFormProps) {
   const [submitted, setSubmitted] = useState(false);
   const [pending, setPending] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [captchaKey, setCaptchaKey] = useState(0);
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -51,12 +122,15 @@ export function DemoForm({ className }: DemoFormProps) {
       learners: String(fd.get("learners") || ""),
       message: String(fd.get("message") || ""),
       website: String(fd.get("website") || ""),
+      captchaId: String(fd.get("captchaId") || ""),
+      captchaAnswer: String(fd.get("captchaAnswer") || ""),
     });
 
     setPending(false);
 
     if (!result.ok) {
       setError(result.error);
+      setCaptchaKey((key) => key + 1);
       return;
     }
 
@@ -104,7 +178,6 @@ export function DemoForm({ className }: DemoFormProps) {
         "relative rounded-xl border border-border bg-surface p-6 sm:p-8",
         className,
       )}
-      noValidate
     >
       <Honeypot />
       <div className="grid gap-5 sm:grid-cols-2">
@@ -226,6 +299,7 @@ export function DemoForm({ className }: DemoFormProps) {
             placeholder="Tell us about your institution and what you want to see in the demo."
           />
         </div>
+        <CaptchaFields key={captchaKey} />
       </div>
       {error ? (
         <p className="mt-4 text-sm text-red-700" role="alert">
@@ -251,6 +325,7 @@ export function ContactForm({ className }: { className?: string }) {
   const [submitted, setSubmitted] = useState(false);
   const [pending, setPending] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [captchaKey, setCaptchaKey] = useState(0);
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -268,12 +343,15 @@ export function ContactForm({ className }: { className?: string }) {
       enquiryType: String(fd.get("enquiryType") || ""),
       message: String(fd.get("message") || ""),
       website: String(fd.get("website") || ""),
+      captchaId: String(fd.get("captchaId") || ""),
+      captchaAnswer: String(fd.get("captchaAnswer") || ""),
     });
 
     setPending(false);
 
     if (!result.ok) {
       setError(result.error);
+      setCaptchaKey((key) => key + 1);
       return;
     }
 
@@ -385,6 +463,7 @@ export function ContactForm({ className }: { className?: string }) {
             className={fieldClass}
           />
         </div>
+        <CaptchaFields key={captchaKey} />
       </div>
       {error ? (
         <p className="mt-4 text-sm text-red-700" role="alert">
