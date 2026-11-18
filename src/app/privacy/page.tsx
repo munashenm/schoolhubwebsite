@@ -28,7 +28,11 @@ export default function PrivacyPage() {
             This policy applies to the public marketing website at{" "}
             {siteConfig.domain}. The SchoolHub application at{" "}
             {siteConfig.applicationUrl} may have separate product terms and
-            privacy notices for institutional deployments.
+            privacy notices for institutional deployments. Read the{" "}
+            <a href="/application-privacy" className="font-medium text-brand underline">
+              SchoolHub application privacy policy
+            </a>
+            {" "}for details about the web and Android app.
           </p>
           <h2 className="text-lg font-semibold text-ink">Information we collect</h2>
           <p>
