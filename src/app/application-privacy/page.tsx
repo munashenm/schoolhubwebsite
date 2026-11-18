@@ -31,7 +31,7 @@ export default function ApplicationPrivacyPage() {
             <a className="font-medium text-brand underline" href={siteConfig.applicationUrl}>
               {siteConfig.applicationUrl}
             </a>
-            . For the marketing website's own enquiries and contact forms, see{" "}
+            . For the marketing website&apos;s own enquiries and contact forms, see{" "}
             <Link className="font-medium text-brand underline" href="/privacy">
               Marketing website Privacy Policy
             </Link>
@@ -57,7 +57,7 @@ export default function ApplicationPrivacyPage() {
           </div>
           <p className="text-xs text-muted-soft">
             Updated 18 November 2026. This document describes the current application implementation;
-            it does not replace a school's own privacy notice or legal obligations.
+            it does not replace a school&apos;s own privacy notice or legal obligations.
           </p>
         </Container>
       </Section>
