@@ -98,7 +98,7 @@ export function PublicDeletionRequestForm() {
       <div>
         <label className={labelClass} htmlFor="deletion-school">School, college or institution</label>
         <input id="deletion-school" name="institutionName" required minLength={2} maxLength={160} className={inputClass} />
-        <p className="mt-1 text-xs text-muted">Use the institution's registered name or SchoolHub code if known.</p>
+        <p className="mt-1 text-xs text-muted">Use the institution&apos;s registered name or SchoolHub code if known.</p>
       </div>
       <div>
         <label className={labelClass} htmlFor="deletion-role">Account type</label>
