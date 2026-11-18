@@ -21,6 +21,8 @@ export const sitemapRoutes = [
   "/contact",
   "/resources",
   "/privacy",
+  "/application-privacy",
+  "/data-deletion",
   "/terms",
 ] as const;
 
@@ -50,5 +52,7 @@ export const defaultDescriptions = {
   contact: `Contact SchoolHub SA and Cyber Developers for sales, demos, technical and partnership enquiries.`,
   resources: `Resources for evaluating SchoolHub as a school management system and college management platform.`,
   privacy: `Privacy policy for the SchoolHub SA marketing website.`,
+  applicationPrivacy: `Privacy policy for the SchoolHub SA web and Android application.`,
+  dataDeletion: `Request SchoolHub SA account or data deletion and track your request.`,
   terms: `Terms of use for the SchoolHub SA marketing website.`,
 };
