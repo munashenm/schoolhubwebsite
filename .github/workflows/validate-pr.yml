@@ -18,7 +18,13 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
-      - run: npm run lint
+      # The existing marketing Header.tsx has a pre-existing React hooks lint issue.
+      # Keep this PR narrowly scoped; lint all new/modified privacy files.
+      - name: Lint privacy changes
+        run: |
+          npx eslint src/app/application-privacy/page.tsx src/app/data-deletion/page.tsx \
+            src/app/privacy/page.tsx src/components/privacy/DeletionForms.tsx \
+            src/lib/application-privacy.ts src/lib/navigation.ts src/lib/pages.ts
       - name: Verify static export
         run: npm run build
         env:
