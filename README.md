@@ -74,3 +74,36 @@ Manual local static build:
 npm run build
 # Output is in /out — upload contents to the domain document root
 ```
+
+
+## Application privacy and data deletion
+
+These public marketing-site pages are separate from the existing marketing-only `/privacy/` policy:
+
+- `/application-privacy/`: the SchoolHub SA web and Android application privacy policy, based on the application repository's current policy with remembered-device details.
+- `/data-deletion/`: a request form and reference-status checker.
+
+This site is statically exported. **No SchoolHub learner, user or deletion-request database lives here.**
+The forms use browser `POST` requests with `Content-Type: application/json` and
+`credentials: omit` to the existing `https://app.schoolhubsa.co.za/api/privacy/deletion-requests`
+and `/lookup` endpoints. The application backend is the source of truth for validation,
+rate limits, identity review, audit logging and request status.
+
+### Required deployment checks
+
+1. Confirm the application repository's privacy CORS update (PR #185) is deployed. The API must
+   allow requests from `https://schoolhubsa.co.za` and `https://www.schoolhubsa.co.za`,
+   including `OPTIONS` and `POST`, without allowing credentialed cross-origin requests.
+2. Merge this website PR only after review. GitHub Actions builds `main` to `cpanel-deploy`;
+   cPanel still needs to pull/deploy the resulting static export.
+3. Confirm both public URLs return HTTP 200 without login; canonical website may redirect `www`.
+4. Confirm the published form can submit using a specially authorised **fictional** account and
+   check the reference; avoid creating arbitrary test deletion requests in production. Verify
+   rejection from unrelated origins and that no school record is changed.
+5. Keep `https://app.schoolhubsa.co.za/application-privacy` and
+   `https://app.schoolhubsa.co.za/data-deletion` available until the new pages and form work.
+6. Only then change the Play Console URLs. Current deletion fulfilment can deactivate a login,
+   revoke passkeys and push subscriptions, but does not permanently erase all eligible account
+   data; assess and address applicable Google Play deletion requirements before public release.
+
+No Android package or signing configuration changes are needed for these marketing pages.

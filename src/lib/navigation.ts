@@ -99,6 +99,8 @@ export const footerNav = {
     { label: "Resources", href: "/resources" },
     { label: "Pricing", href: "/pricing" },
     { label: "Privacy Policy", href: "/privacy" },
+    { label: "Application Privacy", href: "/application-privacy" },
+    { label: "Data Deletion", href: "/data-deletion" },
     { label: "Terms", href: "/terms" },
   ],
 } as const;
