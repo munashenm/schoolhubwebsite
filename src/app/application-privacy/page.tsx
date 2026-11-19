@@ -56,7 +56,7 @@ export default function ApplicationPrivacyPage() {
             </Link>
           </div>
           <p className="text-xs text-muted-soft">
-            Updated 18 November 2026. This document describes the current application implementation;
+            Updated 19 November 2026. This document describes the current application implementation;
             it does not replace a school&apos;s own privacy notice or legal obligations.
           </p>
         </Container>
