@@ -32,12 +32,16 @@ export default function DataDeletionPage() {
               required before eligible account actions are taken.
             </p>
             <p className="mt-3">
-              Submitting this form does not automatically erase records. After verification,
-              eligible actions currently include deactivating portal sign-in and removing
-              passkeys or push subscriptions. Educational, attendance, academic, statutory
-              and financial records may have to be retained by your school or college.
-              SchoolHub currently does not automatically erase the account row or those
-              records; requests needing further erasure are reviewed separately.
+              Submitting this form does not automatically delete any data. After identity
+              verification, an authorised reviewer can disable the portal sign-in, replace
+              its email, name, phone, profile image and password, and remove its passkeys,
+              remembered devices, push subscriptions and personal notification inbox.
+              The account row remains linked to the institution&apos;s learner, guardian,
+              educator or staff records. Learner marks, attendance, enrolment, fees,
+              invoices, payroll and other school records are retained by the institution,
+              together with the request history and the name and email supplied on this form.
+              The reviewer records the reason for retention. Simply turning off access
+              without replacing the sign-in details is not treated as account deletion.
             </p>
             <p className="mt-3">
               See the{" "}
